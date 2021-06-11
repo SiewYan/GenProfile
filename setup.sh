@@ -12,6 +12,8 @@ NAME=$1
 ARCH=`grep -w "SCRAM_ARCH" $1 | awk -F "=" '{print $2}'`
 CMSSW=`grep -w "scram p CMSSW" $1 | awk -F " " '{print $NF}'`
 CMSDRIVER=`grep -w "cmsDriver.py" $1`
+NUMBER=`grep "EVENTS=" $1 | awk -F "=" '{print $NF}'`
+NTHREAD="1"
 
 arg(){
     echo $(echo $CMSDRIVER | awk -F "$1 " '{print $NF}' | awk -F " " '{print $1}')
@@ -51,26 +53,18 @@ echo "CMSSW version     : $CMSSW"
 mkdir -p ${NAME}_cmdLog
 cd ${NAME}_cmdLog
 
-NUMBER="100"
-#EVENTS="1437"
-EVENTS="100"
-NTHREAD="1"
-
 cat <<EOF> cmdLog
 #!/bin/bash
 
 # step1 LHE step
 cmsDriver.py Configuration/GenProduction/python/${NAME}-fragment.py \
 --conditions `arg "--conditions"` \
--s LHE \
---datatier GEN \
+--step LHE \
+--datatier LHE,GEN \
+--eventcontent LHE,RAWSIM \
 --beamspot `arg "--beamspot"` \
--n ${EVENTS} \
---eventcontent LHE \
 --number ${NUMBER} \
 --nThreads ${NTHREAD} \
---customise Configuration/DataProcessing/Utils.addMonitoring \
---customise_commands `arg "--customise_commands"` \
 --python_filename ${NAME}-fragment_LHE.py \
 --no_exec \
 --fileout file:step1.root > step1_$NAME.log  2>&1
@@ -78,15 +72,12 @@ cmsDriver.py Configuration/GenProduction/python/${NAME}-fragment.py \
 # step2 GEN-SIM step
 cmsDriver.py Configuration/GenProduction/python/${NAME}-fragment.py \
 --conditions `arg "--conditions"` \
--s GEN \
---datatier GEN-SIM \
---beamspot `arg "--beamspot"` \
--n ${EVENTS} \
+--step GEN \
+--datatier GEN \
 --eventcontent RAWSIM \
+--beamspot `arg "--beamspot"` \
 --number ${NUMBER} \
 --nThreads ${NTHREAD} \
---customise Configuration/DataProcessing/Utils.addMonitoring \
---customise_commands `arg "--customise_commands"` \
 --geometry `arg "--geometry"` \
 --era `arg "--era"` \
 --python_filename ${NAME}-fragment_GEN.py \
@@ -99,3 +90,18 @@ chmod +x cmdLog
 ./cmdLog
 
 echo "setup complete: ${1}_cmdLog"
+
+#--customise Configuration/DataProcessing/Utils.addMonitoring \
+
+#https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ#Illegal_parameter_found_in_confi
+#--customise_commands `arg "--customise_commands"` \
+#----- Begin Fatal Exception 11-Jun-2021 08:13:21 CEST-----------------------
+#An exception of category 'Configuration' occurred while
+#   [0] Constructing the EventProcessor
+#   [1] Validating configuration of input source of type PoolSource
+#Exception Message:
+#Illegal parameter found in configuration.  The parameter is named:
+# 'numberEventsInLuminosityBlock'
+#You could be trying to use a parameter name that is not
+#allowed for this plugin or it could be misspelled.
+#----- End Fatal Exception -------------------------------------------------

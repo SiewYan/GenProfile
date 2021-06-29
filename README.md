@@ -7,6 +7,8 @@ Linux cms-oc-gpu-01.cern.ch 3.10.0-1160.24.1.el7.x86_64
 ```
 
 ## Profiling
+
+After setup.sh, you have to set the CMSSW_BASE environment by doing ```cmsenv``` to use igprof
 ```
 ./setup.sh TAU-RunIISummer19UL18wmLHEGEN-00006
 ./run_cpu.sh TAU-RunIISummer19UL18wmLHEGEN-00006

@@ -13,8 +13,8 @@ WRAPPER="--"
 cd ${1}_cmdLog
 
 # step1
-echo "cpu step1"
+echo "mem step1"
 igprof -mp -o ./igprofMEM_step1.gz -- cmsRun $WRAPPER ${1}-fragment_LHE.py >& step1_mem.log
 
-echo "cpu step2"
+echo "mem step2"
 igprof -mp -o ./igprofMEM_step2.gz -- cmsRun $WRAPPER ${1}-fragment_GEN.py >& step2_mem.log

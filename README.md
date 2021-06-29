@@ -1,20 +1,25 @@
 # GenProfile
 scripts for profiling generator application
 
-## profiling
+## Environment
+```
+Linux cms-oc-gpu-01.cern.ch 3.10.0-1160.24.1.el7.x86_64
+```
+
+## Profiling
 ```
 ./setup.sh TAU-RunIISummer19UL18wmLHEGEN-00006
 ./run_cpu.sh TAU-RunIISummer19UL18wmLHEGEN-00006
 ./run_cpu.sh TAU-RunIISummer19UL18wmLHEGEN-00006
 ```
 
-## generate report
+## Generate report
 ```
 ./profile.sh TAU-RunIISummer19UL18wmLHEGEN-00006
 ./profile_mem.sh TAU-RunIISummer19UL18wmLHEGEN-00006
 ```
 
-## processes
+## Processes
 | Process                                                                      | McM                                 |
 | ---------------------------------------------------------------------------- | ----------------------------------- |
 | DY4JetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8                           | TAU-RunIISummer19UL18wmLHEGEN-00006 |

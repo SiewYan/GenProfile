@@ -1,6 +1,20 @@
 # GenProfile
 scripts for profiling generator application
 
+## profiling
+```
+./setup.sh TAU-RunIISummer19UL18wmLHEGEN-00006
+./run_cpu.sh TAU-RunIISummer19UL18wmLHEGEN-00006
+./run_cpu.sh TAU-RunIISummer19UL18wmLHEGEN-00006
+```
+
+## generate report
+```
+./profile.sh TAU-RunIISummer19UL18wmLHEGEN-00006
+./profile_mem.sh TAU-RunIISummer19UL18wmLHEGEN-00006
+```
+
+## processes
 | Process                                                                      | McM                                 |
 | ---------------------------------------------------------------------------- | ----------------------------------- |
 | DY4JetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8                           | TAU-RunIISummer19UL18wmLHEGEN-00006 |

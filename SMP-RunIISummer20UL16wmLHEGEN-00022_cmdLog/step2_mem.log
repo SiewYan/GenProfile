@@ -1,0 +1,1730 @@
+30-Jun-2021 09:24:21 CEST  Initiating request to open file file:step1.root
+30-Jun-2021 09:24:21 CEST  Successfully opened file file:step1.root
+%MSG-w LogicError:  Pythia8HadronizerFilter:generator@beginRun  30-Jun-2021 09:24:23 CEST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'externalLHEProducer'.
+The specified productInstanceName was ''.
+
+%MSG
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.240      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change: 20 Dec 2018  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 30 Jun 2021 at 09:24:23    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Department of Theoretical Physics, Tata Institute,         |  | 
+ |  |      Homi Bhabha Road, Mumbai 400005, India;                                 |  | 
+ |  |      e-mail: desai@theory.tifr.res.in                                        |  | 
+ |  |   Ilkka Helenius;  Department of Physics, University of Jyvaskyla,           |  | 
+ |  |      P.O. Box 35, FI-40014 University of Jyvaskyla, Finland;                 |  | 
+ |  |      e-mail: ilkka.m.helenius@jyu.fi                                         |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Department of Astronomy and Theoretical Physics,          |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: stefan.prestel@thep.lu.se                                       |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2018 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.240      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change: 20 Dec 2018  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 30 Jun 2021 at 09:24:23    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Department of Theoretical Physics, Tata Institute,         |  | 
+ |  |      Homi Bhabha Road, Mumbai 400005, India;                                 |  | 
+ |  |      e-mail: desai@theory.tifr.res.in                                        |  | 
+ |  |   Ilkka Helenius;  Department of Physics, University of Jyvaskyla,           |  | 
+ |  |      P.O. Box 35, FI-40014 University of Jyvaskyla, Finland;                 |  | 
+ |  |      e-mail: ilkka.m.helenius@jyu.fi                                         |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Department of Astronomy and Theoretical Physics,          |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: stefan.prestel@thep.lu.se                                       |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2018 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+Message from PHCORK(MODCOR):: initialization
+MODOP=5 -- corrects Energy from mass+flow
+
+********************************************************************************
+
+                            =========================
+                              PHOTOS, Version:  3.61
+                              Released at:  29/9/15
+                            =========================
+
+                     Photos QED corrections in Particle Decays
+
+           Monte Carlo Program - by E. Barberio, B. van Eijk and Z. Was
+           From version 2.09   - by P. Golonka and Z. Was
+           From version 3.00   - by N. Davidson, T. Przedzinski and Z. Was
+********************************************************************************
+
+                  Internal (default) input parameters: 
+
+                    INTERF= 1 ISEC= 0 ITRE= 0 IEXP= 1 IFTOP= 1 IFW= 1
+                    ALPHA_QED= 0x1.de3d3945c2bf2p-8 XPHCUT= 0x1.ad7f29abcaf48p-24
+
+                    Option with interference is active
+                    Option with exponentiation is active EPSEXP=0x1.a36e2eb1c432dp-14
+                    Emision in t tbar production is active
+                    Correction wt in decay of W is active
+
+          WARNING:  /HEPEVT/ is not anymore used.
+
+********************************************************************************
+MODOP=2 -- blocks emission in Kl  to gamma e+e-: DEFAULT
+MODOP=2 -- blocks emission in pi0 to gamma e+e-: DEFAULT
+ IPHQRK_setQarknoEmission MODOP=1 -- blocks emission from light quarks:  DEFAULT
+Message from PHCORK(MODCOR):: initialization
+MODOP=5 -- corrects Energy from mass+flow
+INFO from PHOTOS:
+PHOTOS production mode. Elementary test of data flow from event record disabled. 
+Prior checks of the complete configuration 
+(for the particular set of input parameters) must have been done! 
+
+********************************************************************************
+
+                            =========================================
+                            PHOTOS, information routine
+                            Input parameters after reinitialization: 
+
+                            =========================================
+
+********************************************************************************
+
+                    INTERF= 1 ISEC= 0 ITRE= 0 IEXP= 1 IFTOP= 1 IFW= 1
+                    ALPHA_QED= 0x1.de3d3945c2bf2p-8 XPHCUT= 0x1.cd5f99c38b04bp-14
+
+                    Option with interference is active
+                    Option with exponentiation is active EPSEXP=0x1.a36e2eb1c432dp-14
+                    Emision in t tbar production is active
+                    Correction wt in decay of W is active
+                    ME in decay of Z is active
+                    ME in decay of W is active
+                    emission of pairs is active
+                    emission of photons is inactive
+
+          WARNING:  /HEPEVT/ is not anymore used.
+
+LHAPDF 6.2.1 loading /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/lhapdf/6.2.1-pafccj3/share/LHAPDF/NNPDF31_nnlo_as_0118/NNPDF31_nnlo_as_0118_0000.dat
+NNPDF31_nnlo_as_0118 PDF set, member #0, version 1; LHAPDF ID = 303600
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Les Houches User Process(es)                  9999 |   1.000e-09 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    55.51 mb              | 
+ |                                                                  | 
+ |    pT0 =  1.44 gives sigmaInteraction =   464.64 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | BeamRemnants:hardKTOnlyLHE                    |                       on |          off                         | 
+ | BeamRemnants:primordialKThard                 |                  2.22500 |      1.80000         0.0             | 
+ | Beams:frameType                               |                        5 |            1           1           5 | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | ColourReconnection:range                      |                  5.17600 |      1.80000         0.0    10.00000 | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:alphaSorder           |                        2 |            1           0           2 | 
+ | MultipartonInteractions:alphaSvalue           |                  0.11800 |      0.13000   0.0600000     0.25000 | 
+ | MultipartonInteractions:bProfile              |                        2 |            3           0           4 | 
+ | MultipartonInteractions:coreFraction          |                  0.63000 |      0.50000         0.0     1.00000 | 
+ | MultipartonInteractions:coreRadius            |                  0.76340 |      0.40000     0.10000     1.00000 | 
+ | MultipartonInteractions:ecmPow                |                0.0334400 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:pT0Ref                |                  1.41000 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:allowPhotonRadiation           |                       on |          off                         | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PDF:pSet                                      | LHAPDF6:NNPDF31_nnlo_as_0118 |           13                     | 
+ | SigmaProcess:alphaSorder                      |                        2 |            1           0           2 | 
+ | SigmaProcess:alphaSvalue                      |                  0.11800 |      0.13000   0.0600000     0.25000 | 
+ | SigmaTotal:mode                               |                        0 |            1           0           4 | 
+ | SigmaTotal:sigmaEl                            |                 21.89000 |     25.00000         0.0             | 
+ | SigmaTotal:sigmaTot                           |                100.30900 |    100.00000         0.0             | 
+ | SigmaTotal:zeroAXB                            |                      off |           on                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | SpaceShower:alphaSorder                       |                        2 |            1           0           2 | 
+ | SpaceShower:alphaSvalue                       |                  0.11800 |      0.13650   0.0600000     0.25000 | 
+ | SpaceShower:dipoleRecoil                      |                       on |          off                         | 
+ | SpaceShower:pTmaxMatch                        |                        1 |            0           0           2 | 
+ | TimeShower:alphaSorder                        |                        2 |            1           0           2 | 
+ | TimeShower:alphaSvalue                        |                  0.11800 |      0.13650   0.0600000     0.25000 | 
+ | TimeShower:QEDshowerByL                       |                      off |           on                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ | UncertaintyBands:doVariations                 |                       on |          off                         | 
+ | UncertaintyBands:FSRpTmin2Fac                 |                 20.00000 |      4.00000         0.0   100.00000 | 
+ | UncertaintyBands:ISRpTmin2Fac                 |                  1.00000 |      4.00000         0.0   100.00000 | 
+ | UncertaintyBands:List                         | isrRedHi isr:muRfac=0.707 | alphaShi fsr:muRfac=0.5 isr:muRfac=0.5 | 
+ |                                               | fsrRedHi fsr:muRfac=0.707 |   alphaSlo fsr:muRfac=2.0 isr:muRfac=2.0 | 
+ |                                               | isrRedLo isr:muRfac=1.414 |   hardHi fsr:cNS=2.0 isr:cNS=2.0    | 
+ |                                               | fsrRedLo fsr:muRfac=1.414 |  hardLo fsr:cNS=-2.0 isr:cNS=-2.0   | 
+ |                                               |  isrDefHi isr:muRfac=0.5 |                                      | 
+ |                                               |  fsrDefHi fsr:muRfac=0.5 |                                      | 
+ |                                               |  isrDefLo isr:muRfac=2.0 |                                      | 
+ |                                               |  fsrDefLo fsr:muRfac=2.0 |                                      | 
+ |                                               | isrConHi isr:muRfac=0.25 |                                      | 
+ |                                               | fsrConHi fsr:muRfac=0.25 |                                      | 
+ |                                               |  isrConLo isr:muRfac=4.0 |                                      | 
+ |                                               |  fsrConLo fsr:muRfac=4.0 |                                      | 
+ |                                               | fsr_G2GG_muR_dn fsr:G2GG:muRfac=0.5 |                           | 
+ |                                               | fsr_G2GG_muR_up fsr:G2GG:muRfac=2.0 |                           | 
+ |                                               | fsr_G2QQ_muR_dn fsr:G2QQ:muRfac=0.5 |                           | 
+ |                                               | fsr_G2QQ_muR_up fsr:G2QQ:muRfac=2.0 |                           | 
+ |                                               | fsr_Q2QG_muR_dn fsr:Q2QG:muRfac=0.5 |                           | 
+ |                                               | fsr_Q2QG_muR_up fsr:Q2QG:muRfac=2.0 |                           | 
+ |                                               | fsr_X2XG_muR_dn fsr:X2XG:muRfac=0.5 |                           | 
+ |                                               | fsr_X2XG_muR_up fsr:X2XG:muRfac=2.0 |                           | 
+ |                                               | fsr_G2GG_cNS_dn fsr:G2GG:cNS=-2.0 |                             | 
+ |                                               | fsr_G2GG_cNS_up fsr:G2GG:cNS=2.0 |                              | 
+ |                                               | fsr_G2QQ_cNS_dn fsr:G2QQ:cNS=-2.0 |                             | 
+ |                                               | fsr_G2QQ_cNS_up fsr:G2QQ:cNS=2.0 |                              | 
+ |                                               | fsr_Q2QG_cNS_dn fsr:Q2QG:cNS=-2.0 |                             | 
+ |                                               | fsr_Q2QG_cNS_up fsr:Q2QG:cNS=2.0 |                              | 
+ |                                               | fsr_X2XG_cNS_dn fsr:X2XG:cNS=-2.0 |                             | 
+ |                                               | fsr_X2XG_cNS_up fsr:X2XG:cNS=2.0 |                              | 
+ |                                               | isr_G2GG_muR_dn isr:G2GG:muRfac=0.5 |                           | 
+ |                                               | isr_G2GG_muR_up isr:G2GG:muRfac=2.0 |                           | 
+ |                                               | isr_G2QQ_muR_dn isr:G2QQ:muRfac=0.5 |                           | 
+ |                                               | isr_G2QQ_muR_up isr:G2QQ:muRfac=2.0 |                           | 
+ |                                               | isr_Q2QG_muR_dn isr:Q2QG:muRfac=0.5 |                           | 
+ |                                               | isr_Q2QG_muR_up isr:Q2QG:muRfac=2.0 |                           | 
+ |                                               | isr_X2XG_muR_dn isr:X2XG:muRfac=0.5 |                           | 
+ |                                               | isr_X2XG_muR_up isr:X2XG:muRfac=2.0 |                           | 
+ |                                               | isr_G2GG_cNS_dn isr:G2GG:cNS=-2.0 |                             | 
+ |                                               | isr_G2GG_cNS_up isr:G2GG:cNS=2.0 |                              | 
+ |                                               | isr_G2QQ_cNS_dn isr:G2QQ:cNS=-2.0 |                             | 
+ |                                               | isr_G2QQ_cNS_up isr:G2QQ:cNS=2.0 |                              | 
+ |                                               | isr_Q2QG_cNS_dn isr:Q2QG:cNS=-2.0 |                             | 
+ |                                               | isr_Q2QG_cNS_up isr:Q2QG:cNS=2.0 |                              | 
+ |                                               | isr_X2XG_cNS_dn isr:X2XG:cNS=-2.0 |                             | 
+ |                                               | isr_X2XG_cNS_up isr:X2XG:cNS=2.0 |                              | 
+ | UncertaintyBands:MPIshowers                   |                       on |          off                         | 
+ | UncertaintyBands:nFlavQ                       |                        4 |            6           2           6 | 
+ | UncertaintyBands:overSampleFSR                |                 10.00000 |      3.00000     1.00000    10.00000 | 
+ | UncertaintyBands:overSampleISR                |                 10.00000 |      2.00000     1.00000    10.00000 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:allowPhotonRadiation           |                       on |          off                         | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | ProcessLevel:all                              |                      off |           on                         | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:25.553 CEST
+
+ --------  LHA event information and listing  ---------------------------------------------------------------------- 
+
+    process =     9987    weight =   1.3874e+04     scale =   9.2728e+00 (GeV) 
+                        alpha_em =  -1.0000e+00    alpha_strong =   1.9944e-01
+
+    Participating Particles 
+    no        id stat     mothers     colours      p_x        p_y        p_z         e          m        tau    spin 
+     1         2   -1     0     0   501     0      0.000      0.000      9.318      9.318      0.000   0.000   9.000
+     2        -1   -1     0     0     0   502      0.000      0.000   -241.113    241.113      0.000   0.000   9.000
+     3        24    2     1     2     0     0     -2.811      8.572   -208.517    223.967     81.242   0.000   9.000
+     4       -13    1     3     3     0     0      5.096    -29.344   -155.398    158.226      0.106   0.000   9.000
+     5        14    1     3     3     0     0     -7.907     37.916    -53.120     65.741      0.000   0.000   9.000
+     6        21    1     1     2   501   511     -0.911     -3.169     -1.328      3.555      0.000   0.000   9.000
+     7        21    1     1     2   511   502      3.722     -5.403    -21.950     22.910      0.000   0.000   9.000
+
+ --------  End LHA event information and listing  ------------------------------------------------------------------ 
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =    2, x =  1.434e-03, pdf =  0.000e+00 at Q2 =  8.599e+01.
+ In 2: id =   -1, x =  3.709e-02, pdf =  0.000e+00 at same Q2.
+
+ Process Les Houches User Process(es) with code 9999 is 2 -> 3.
+ Subprocess user process 9987 with code 9987 is 2 -> 3.
+ It has sHat =  8.987e+03, <pTHat> =  6.293e+00.
+     alphaEM =  7.620e-03,  alphaS =  1.994e-01    at Q2 =  8.599e+01.
+
+ Impact parameter b =  1.151e+00 gives enhancement factor =  2.883e-01.
+ Max pT scale for MPI =  1.300e+04, ISR =  9.273e+00, FSR =  9.273e+00.
+ Number of MPI =     3, ISR =     2, FSRproc =     2, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3          2  (u)                -21     1     0     5     7   501     0      0.000      0.000      9.318      9.318      0.000
+     4         -1  (dbar)             -21     2     0     5     7     0   502      0.000      0.000   -241.113    241.113      0.000
+     5         24  (W+)               -22     3     4     8     9     0     0     -2.811      8.572   -208.517    223.967     81.242
+     6         21  g                   23     3     4     0     0   501   511     -0.911     -3.169     -1.328      3.555      0.000
+     7         21  g                   23     3     4     0     0   511   502      3.722     -5.403    -21.950     22.910      0.000
+     8        -13  mu+                 23     5     0     0     0     0     0      5.096    -29.344   -155.398    158.226      0.106
+     9         14  nu_mu               23     5     0     0     0     0     0     -7.907     37.916    -53.120     65.741      0.000
+                                   Charge sum:  1.000           Momentum sum:     -0.000      0.000   -231.795    250.431     94.799
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -23 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4       -23
+ O: 6        33       21 -2.64e-01,+2.32e+00,+1.29e+01,+1.32e+01  61        -4
+             41       21 -1.60e+00,+1.58e+00,+1.15e+01,+1.18e+01  61       -14
+             46        1 -1.59e-01,-1.47e+00,+3.02e+00,+3.36e+00  61       -20
+             50     2101 +8.36e-01,-8.62e-01,+6.46e+03,+6.46e+03  63       -57
+             51        2 +4.98e-01,-7.75e-01,+4.08e+00,+4.20e+00  63       -43
+             52       -1 +6.88e-01,-7.96e-01,+7.91e+00,+7.98e+00  63       -38
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -24 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4       -24
+ O: 7        34       -1 +3.78e-01,+4.27e-01,-2.41e+02,+2.41e+02  61        -5
+             42       -3 -1.45e-01,-5.58e-01,-5.41e+01,+5.41e+01  61       -15
+             47       21 -3.44e-01,+1.65e-01,-1.50e+03,+1.50e+03  61       -21
+             53     2101 +1.84e-01,-8.61e-01,-2.40e+02,+2.40e+02  63       -41
+             54        2 +1.63e-02,+3.03e-01,-1.91e+03,+1.91e+03  63       -56
+             55        1 -1.57e-02,-1.06e-02,-1.99e+03,+1.99e+03  63       -40
+             56        3 -7.29e-02,+5.34e-01,-5.68e+02,+5.68e+02  63       -47
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:       -1 ID:    0 (X,cT):0
+ I: 1         8       21 +4.44e-16,+8.88e-16,+1.30e+01,+1.30e+01  41        -1
+ O: 2         3        2 +0.00e+00,+0.00e+00,+9.32e+00,+9.32e+00  21        -3
+             13       -2 -2.20e+00,-4.20e+00,+2.89e+00,+5.56e+00  43       -28
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =    2, x =  1.434e-03, pdf =  0.000e+00 at Q2 =  8.599e+01.
+ In 2: id =   -1, x =  3.709e-02, pdf =  0.000e+00 at same Q2.
+
+ Process Les Houches User Process(es) with code 9999 is 2 -> 3.
+ Subprocess user process 9987 with code 9987 is 2 -> 3.
+ It has sHat =  8.987e+03, <pTHat> =  6.293e+00.
+     alphaEM =  7.620e-03,  alphaS =  1.994e-01    at Q2 =  8.599e+01.
+
+ Impact parameter b =  1.151e+00 gives enhancement factor =  2.883e-01.
+ Max pT scale for MPI =  1.300e+04, ISR =  9.273e+00, FSR =  9.273e+00.
+ Number of MPI =     3, ISR =     2, FSRproc =     2, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (complete event)  ---------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0    33     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0    34     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3          2  (u)                -21     8     0     5     7   501     0      0.000      0.000      9.318      9.318      0.000
+     4         -1  (dbar)             -21     9     9     5     7     0   502      0.000      0.000   -241.113    241.113      0.000
+     5         24  (W+)               -22     3     4    10    10     0     0     -2.811      8.572   -208.517    223.967     81.242
+     6         21  (g)                -23     3     4    11    11   501   511     -0.911     -3.169     -1.328      3.555      0.000
+     7         21  (g)                -23     3     4    12    12   511   502      3.722     -5.403    -21.950     22.910      0.000
+     8         21  (g)                -41    33    33    13     3   501   520      0.000      0.000     13.044     13.044      0.000
+     9         -1  (dbar)             -42    34    34     4     4     0   502      0.000      0.000   -241.113    241.113      0.000
+    10         24  (W+)               -44     5     5    35    35     0     0     -2.811      8.572   -208.517    223.967     81.242
+    11         21  (g)                -44     6     6    16    16   501   511      1.291      1.026     -0.492      1.721      0.000
+    12         21  (g)                -44     7     7    14    15   511   502      3.722     -5.403    -21.950     22.910      0.000
+    13         -2  (ubar)             -43     8     0    38    38     0   520     -2.202     -4.196      2.889      5.560      0.330
+    14         21  (g)                -51    12     0    28    28   581   502      2.244     -4.713    -18.389     19.116      0.000
+    15         21  (g)                -51    12     0    26    27   511   581      1.649     -0.553     -3.626      4.022      0.000
+    16         21  (g)                -52    11    11    36    36   501   511      1.120      0.890     -0.427      1.493      0.000
+    17         21  (g)                -31    21     0    19    20   590   589      0.000      0.000      2.577      2.577      0.000
+    18         -3  (sbar)             -31    22    22    19    20     0   588      0.000      0.000    -54.130     54.130      0.000
+    19         21  (g)                -33    17    18    23    23   590   588     -0.782     -0.657      2.470      2.672      0.000
+    20         -3  (sbar)             -33    17    18    24    24     0   589      0.782      0.657    -54.023     54.035      0.500
+    21         21  (g)                -41    41    41    25    17   597   589     -0.000     -0.000     11.643     11.643      0.000
+    22         -3  (sbar)             -42    42    42    18    18     0   588      0.000      0.000    -54.130     54.130      0.000
+    23         21  (g)                -44    19    19    43    43   590   588     -1.101     -1.131      7.664      7.825      0.000
+    24         -3  (sbar)             -44    20    20    44    44     0   589      0.782      0.657    -54.023     54.035      0.500
+    25         21  (g)                -43    21     0    45    45   597   590      0.320      0.473      3.872      3.914      0.000
+    26         21  (g)                -51    15     0    39    39   511   621      1.516     -1.018     -3.254      3.732      0.000
+    27         21  (g)                -51    15     0    40    40   621   581      0.670     -0.663     -4.770      4.862      0.000
+    28         21  (g)                -52    14    14    37    37   581   502      1.707     -3.586    -13.991     14.544      0.000
+    29          1  (d)                -31    46    46    31    32   645     0      0.000      0.000      3.190      3.190      0.000
+    30         21  (g)                -31    47    47    31    32   646   645      0.000      0.000  -1500.654   1500.654      0.000
+    31          1  (d)                -33    29    30    48    48   647     0      0.398     -0.216      3.165      3.215      0.330
+    32         21  (g)                -33    29    30    49    49   646   647     -0.398      0.216  -1500.630   1500.630      0.000
+    33         21  (g)                -61     1     0     8     8   589   520     -0.264      2.324     12.943     13.152      0.000
+    34         -1  (dbar)             -61     2     0     9     9     0   502      0.378      0.427   -241.081    241.082      0.000
+    35         24  (W+)               -62    10    10    57    58     0     0     -2.628     10.333   -209.335    224.800     81.242
+    36         21  (g)                -62    16    16    80    80   501   511      1.111      0.987     -0.497      1.567      0.000
+    37         21  (g)                -62    28    28    77    77   581   646      1.724     -3.512    -13.656     14.206      0.000
+    38         -2  (ubar)             -62    13    13    69    69     0   590     -2.286     -3.442      3.203      5.238      0.330
+    39         21  (g)                -62    26    26    79    79   511   621      1.517     -0.969     -3.150      3.628      0.000
+    40         21  (g)                -62    27    27    78    78   621   581      0.676     -0.646     -4.704      4.796      0.000
+    41         21  (g)                -61     1     0    21    21   588   589     -1.600      1.583     11.542     11.759      0.000
+    42         -3  (sbar)             -61     2     0    22    22     0   588     -0.145     -0.558    -54.064     54.067      0.000
+    43         21  (g)                -62    23    23    68    68   590   520     -2.166     -0.078      7.605      7.908      0.000
+    44         -3  (sbar)             -62    24    24    82    82     0   589      0.637      0.101    -53.952     53.958      0.500
+    45         21  (g)                -62    25    25    81    81   589   501     -0.215      1.002      3.825      3.960      0.000
+    46          1  (d)                -61     1     0    29    29   645     0     -0.159     -1.473      3.018      3.362      0.000
+    47         21  (g)                -61     2     0    30    30   588   645     -0.344      0.165  -1500.559   1500.559      0.000
+    48          1  (d)                -62    31    31    59    59   588     0      0.239     -1.690      2.953      3.427      0.330
+    49         21  (g)                -62    32    32    76    76   646   502     -0.742      0.382  -1500.495   1500.495      0.000
+    50       2101  (ud_0)             -63     1     0   108   108     0   645      0.836     -0.862   6460.024   6460.024      0.579
+    51          2  (u)                -63     1     0    67    67   520     0      0.498     -0.775      4.082      4.198      0.330
+    52         -1  (dbar)             -63     1     0    60    60     0   588      0.688     -0.796      7.906      7.982      0.330
+    53       2101  (ud_0)             -63     2     0    64    64     0   656      0.184     -0.861   -240.044    240.046      0.579
+    54          2  (u)                -63     2     0   107   107   645     0      0.016      0.303  -1909.727   1909.727      0.330
+    55          1  (d)                -63     2     0    63    63   656     0     -0.016     -0.011  -1986.421   1986.421      0.330
+    56          3  (s)                -63     2     0    75    75   502     0     -0.073      0.534   -567.619    567.619      0.500
+    57        -13  mu+                 23    35     0     0     0     0     0      5.225    -28.101   -155.975    158.572      0.106
+    58         14  nu_mu               23    35     0     0     0     0     0     -7.853     38.434    -53.360     66.228      0.000
+    59          1  (d)                -71    48    48    61    62   588     0      0.239     -1.690      2.953      3.427      0.330
+    60         -1  (dbar)             -71    52    52    61    62     0   588      0.688     -0.796      7.906      7.982      0.330
+    61        111  (pi0)              -83    59    60   162   163     0     0      0.116     -1.502      2.540      2.956      0.135
+    62        223  (omega)            -84    59    60   164   166     0     0      0.812     -0.984      8.319      8.453      0.788
+    63          1  (d)                -71    55    55    65    66   656     0     -0.016     -0.011  -1986.421   1986.421      0.330
+    64       2101  (ud_0)             -71    53    53    65    66     0   656      0.184     -0.861   -240.044    240.046      0.579
+    65        311  (K0)               -83    63    64   129   129     0     0     -0.125     -0.369  -1872.078   1872.078      0.498
+    66       3122  Lambda0             84    63    64     0     0     0     0      0.293     -0.502   -354.387    354.389      1.116
+    67          2  (u)                -71    51    51    70    74   520     0      0.498     -0.775      4.082      4.198      0.330
+    68         21  (g)                -71    43    43    70    74   590   520     -2.166     -0.078      7.605      7.908      0.000
+    69         -2  (ubar)             -71    38    38    70    74     0   590     -2.286     -3.442      3.203      5.238      0.330
+    70       2224  (Delta++)          -83    67    69   130   131     0     0     -1.319     -0.588      5.968      6.345      1.600
+    71       -213  (rho-)             -83    67    69   132   133     0     0      0.325     -1.106      2.644      2.973      0.723
+    72      -2212  pbar-               83    67    69     0     0     0     0     -0.684     -0.351      2.481      2.761      0.938
+    73        111  (pi0)              -83    67    69   167   168     0     0     -0.070     -1.060      0.950      1.431      0.135
+    74        221  (eta)              -84    67    69   169   171     0     0     -2.205     -1.190      2.848      3.833      0.548
+    75          3  (s)                -71    56    56    83   106   502     0     -0.073      0.534   -567.619    567.619      0.500
+    76         21  (g)                -71    49    49    83   106   646   502     -0.742      0.382  -1500.495   1500.495      0.000
+    77         21  (g)                -71    37    37    83   106   581   646      1.724     -3.512    -13.656     14.206      0.000
+    78         21  (g)                -71    40    40    83   106   621   581      0.676     -0.646     -4.704      4.796      0.000
+    79         21  (g)                -71    39    39    83   106   511   621      1.517     -0.969     -3.150      3.628      0.000
+    80         21  (g)                -71    36    36    83   106   501   511      1.111      0.987     -0.497      1.567      0.000
+    81         21  (g)                -71    45    45    83   106   589   501     -0.215      1.002      3.825      3.960      0.000
+    82         -3  (sbar)             -71    44    44    83   106     0   589      0.637      0.101    -53.952     53.958      0.500
+    83       -321  K-                  83    75    82     0     0     0     0     -0.520      0.318  -1094.804   1094.804      0.494
+    84        221  (eta)              -83    75    82   172   174     0     0     -0.212      0.826   -600.626    600.627      0.548
+    85        211  pi+                 83    75    82     0     0     0     0     -0.038     -0.622   -112.370    112.371      0.140
+    86        221  (eta)              -83    75    82   175   176     0     0     -0.035      0.172   -201.010    201.011      0.548
+    87       2112  n0                  83    75    82     0     0     0     0     -0.108      0.255    -39.485     39.497      0.940
+    88      -2112  nbar0               83    75    82     0     0     0     0      0.289     -0.260     -7.414      7.484      0.940
+    89       -211  pi-                 83    75    82     0     0     0     0      0.307     -0.730     -6.657      6.706      0.140
+    90        213  (rho+)             -83    75    82   134   135     0     0      0.178     -0.743     -6.040      6.148      0.859
+    91        113  (rho0)             -83    75    82   136   137     0     0      0.384     -0.816     -4.487      4.715      1.135
+    92        223  (omega)            -83    75    82   177   179     0     0      0.806      0.162     -4.225      4.373      0.772
+    93       -211  pi-                 83    75    82     0     0     0     0      1.026     -1.732     -7.340      7.612      0.140
+    94        221  (eta)              -83    75    82   180   181     0     0      0.254      0.039     -1.102      1.257      0.548
+    95        213  (rho+)             -83    75    82   138   139     0     0      0.199     -0.502     -1.392      1.649      0.698
+    96        111  (pi0)              -83    75    82   182   183     0     0      0.762      0.329     -2.535      2.670      0.135
+    97        221  (eta)              -84    75    82   184   186     0     0      0.293     -0.171     -0.008      0.645      0.548
+    98        223  (omega)            -84    75    82   187   189     0     0      0.138     -0.118      0.301      0.856      0.781
+    99       -211  pi-                 84    75    82     0     0     0     0      0.280      0.465      0.432      0.708      0.140
+   100        211  pi+                 84    75    82     0     0     0     0     -0.049      0.746      0.986      1.245      0.140
+   101       2112  n0                  84    75    82     0     0     0     0      0.203     -0.420      0.051      1.050      0.940
+   102        211  pi+                 84    75    82     0     0     0     0      0.132      0.360      0.869      0.960      0.140
+   103      -2224  (Deltabar--)       -84    75    82   140   141     0     0     -0.269      0.290     -3.208      3.451      1.208
+   104       2212  p+                  84    75    82     0     0     0     0      0.361     -0.297    -13.170     13.211      0.938
+   105        213  (rho+)             -84    75    82   142   143     0     0     -0.224      0.508     -3.670      3.800      0.815
+   106      -3224  (Sigma*bar-)       -84    75    82   144   145     0     0      0.478     -0.180    -33.343     33.377      1.405
+   107          2  (u)                -71    54    54   109   128   645     0      0.016      0.303  -1909.727   1909.727      0.330
+   108       2101  (ud_0)             -71    50    50   109   128     0   645      0.836     -0.862   6460.024   6460.024      0.579
+   109        111  (pi0)              -83   107   108   190   191     0     0     -0.258      0.079  -1263.587   1263.587      0.135
+   110        111  (pi0)              -83   107   108   192   193     0     0      0.197      0.383   -510.843    510.843      0.135
+   111        211  pi+                 83   107   108     0     0     0     0      0.326      0.146    -87.525     87.526      0.140
+   112        111  (pi0)              -83   107   108   194   195     0     0      0.067     -0.631    -30.779     30.786      0.135
+   113       -213  (rho-)             -83   107   108   146   147     0     0     -0.266      0.142     -9.850      9.943      1.322
+   114        213  (rho+)             -83   107   108   148   149     0     0      0.233      0.501     -3.569      3.711      0.852
+   115       -213  (rho-)             -83   107   108   150   151     0     0     -0.397     -0.072     -3.031      3.176      0.858
+   116        113  (rho0)             -83   107   108   152   153     0     0      0.088      0.129      0.735      1.208      0.945
+   117        211  pi+                 83   107   108     0     0     0     0      0.187     -0.291      0.706      0.798      0.140
+   118       -213  (rho-)             -84   107   108   154   155     0     0      0.149     -0.142      6.698      6.752      0.821
+   119        111  (pi0)              -84   107   108   196   197     0     0     -0.289      0.112      1.610      1.646      0.135
+   120        211  pi+                 84   107   108     0     0     0     0      0.034      0.208     18.910     18.912      0.140
+   121        111  (pi0)              -84   107   108   198   199     0     0     -0.179     -0.305      2.537      2.565      0.135
+   122        223  (omega)            -84   107   108   200   201     0     0      0.188      0.063     60.041     60.047      0.794
+   123       -211  pi-                 84   107   108     0     0     0     0     -0.492     -0.046     84.806     84.808      0.140
+   124        113  (rho0)             -84   107   108   156   157     0     0      0.702     -0.606    101.744    101.752      0.812
+   125        111  (pi0)              -84   107   108   202   203     0     0     -0.373      0.515    720.735    720.735      0.135
+   126        213  (rho+)             -84   107   108   158   159     0     0      0.153     -0.189    551.044    551.044      0.719
+   127       -213  (rho-)             -84   107   108   160   161     0     0      0.027     -0.332   1037.811   1037.812      0.735
+   128       2212  p+                  84   107   108     0     0     0     0      0.756     -0.223   3872.102   3872.103      0.938
+   129        130  K_L0                91    65    65     0     0     0     0     -0.125     -0.369  -1872.078   1872.078      0.498
+   130       2212  p+                  91    70     0     0     0     0     0     -0.596      0.138      3.014      3.215      0.938
+   131        211  pi+                 91    70     0     0     0     0     0     -0.723     -0.726      2.954      3.130      0.140
+   132       -211  pi-                 91    71     0     0     0     0     0      0.404     -0.745      2.283      2.439      0.140
+   133        111  (pi0)              -91    71     0   204   205     0     0     -0.079     -0.362      0.361      0.534      0.135
+   134        211  pi+                 91    90     0     0     0     0     0      0.131      0.011     -0.291      0.349      0.140
+   135        111  (pi0)              -91    90     0   206   207     0     0      0.047     -0.755     -5.748      5.799      0.135
+   136        211  pi+                 91    91     0     0     0     0     0      0.714     -0.785     -2.993      3.179      0.140
+   137       -211  pi-                 91    91     0     0     0     0     0     -0.330     -0.031     -1.493      1.536      0.140
+   138        211  pi+                 91    95     0     0     0     0     0     -0.114     -0.399     -0.396      0.590      0.140
+   139        111  (pi0)              -91    95     0   208   209     0     0      0.313     -0.103     -0.997      1.058      0.135
+   140      -2212  pbar-               91   103     0     0     0     0     0     -0.059      0.315     -2.798      2.968      0.938
+   141       -211  pi-                 91   103     0     0     0     0     0     -0.211     -0.025     -0.411      0.483      0.140
+   142        211  pi+                 91   105     0     0     0     0     0     -0.089      0.240     -3.267      3.280      0.140
+   143        111  (pi0)              -91   105     0   210   211     0     0     -0.135      0.268     -0.403      0.521      0.135
+   144      -3122  Lambdabar0          91   106     0     0     0     0     0      0.570     -0.292    -29.806     29.834      1.116
+   145       -211  pi-                 91   106     0     0     0     0     0     -0.093      0.112     -3.538      3.543      0.140
+   146       -211  pi-                 91   113     0     0     0     0     0     -0.312      0.585     -2.938      3.015      0.140
+   147        111  (pi0)              -91   113     0   212   213     0     0      0.046     -0.443     -6.912      6.927      0.135
+   148        211  pi+                 91   114     0     0     0     0     0      0.180      0.428     -3.502      3.535      0.140
+   149        111  (pi0)              -91   114     0   214   215     0     0      0.054      0.072     -0.068      0.176      0.135
+   150       -211  pi-                 91   115     0     0     0     0     0     -0.053     -0.409     -1.155      1.234      0.140
+   151        111  (pi0)              -91   115     0   216   217     0     0     -0.344      0.337     -1.877      1.942      0.135
+   152        211  pi+                 91   116     0     0     0     0     0      0.086     -0.329      0.611      0.713      0.140
+   153       -211  pi-                 91   116     0     0     0     0     0      0.002      0.458      0.124      0.494      0.140
+   154       -211  pi-                 91   118     0     0     0     0     0      0.148      0.257      4.585      4.597      0.140
+   155        111  (pi0)              -91   118     0   218   219     0     0      0.001     -0.399      2.113      2.155      0.135
+   156        211  pi+                 91   124     0     0     0     0     0      0.341     -0.025     63.656     63.657      0.140
+   157       -211  pi-                 91   124     0     0     0     0     0      0.361     -0.581     38.088     38.095      0.140
+   158        211  pi+                 91   126     0     0     0     0     0      0.258      0.180    214.883    214.883      0.140
+   159        111  (pi0)              -91   126     0   220   221     0     0     -0.105     -0.370    336.161    336.161      0.135
+   160       -211  pi-                 91   127     0     0     0     0     0     -0.249     -0.270    312.550    312.551      0.140
+   161        111  (pi0)              -91   127     0   222   223     0     0      0.275     -0.062    725.261    725.261      0.135
+   162         22  gamma               91    61     0     0     0     0     0      0.110     -1.346      2.350      2.710      0.000
+   163         22  gamma               91    61     0     0     0     0     0      0.006     -0.155      0.190      0.246      0.000
+   164        211  pi+                 91    62     0     0     0     0     0      0.209     -0.226      1.424      1.464      0.140
+   165       -211  pi-                 91    62     0     0     0     0     0      0.243     -0.003      1.239      1.271      0.140
+   166        111  (pi0)              -91    62     0   224   225     0     0      0.359     -0.755      5.655      5.719      0.135
+   167         22  gamma               91    73     0     0     0     0     0      0.008     -0.153      0.083      0.174      0.000
+   168         22  gamma               91    73     0     0     0     0     0     -0.078     -0.907      0.867      1.257      0.000
+   169        211  pi+                 91    74     0     0     0     0     0     -0.753     -0.369      0.744      1.130      0.140
+   170       -211  pi-                 91    74     0     0     0     0     0     -0.744     -0.501      1.160      1.473      0.140
+   171        111  (pi0)              -91    74     0   226   227     0     0     -0.709     -0.320      0.944      1.231      0.135
+   172        211  pi+                 91    84     0     0     0     0     0     -0.064      0.454   -313.681    313.681      0.140
+   173       -211  pi-                 91    84     0     0     0     0     0     -0.014      0.049   -102.114    102.114      0.140
+   174        111  (pi0)              -91    84     0   228   229     0     0     -0.135      0.323   -184.831    184.831      0.135
+   175         22  gamma               91    86     0     0     0     0     0      0.111      0.312    -84.833     84.833      0.000
+   176         22  gamma               91    86     0     0     0     0     0     -0.146     -0.140   -116.178    116.178      0.000
+   177        211  pi+                 91    92     0     0     0     0     0      0.527     -0.052     -2.082      2.153      0.140
+   178       -211  pi-                 91    92     0     0     0     0     0      0.209      0.298     -1.210      1.271      0.140
+   179        111  (pi0)              -91    92     0   230   231     0     0      0.070     -0.084     -0.933      0.949      0.135
+   180         22  gamma               91    94     0     0     0     0     0      0.101     -0.234     -0.715      0.759      0.000
+   181         22  gamma               91    94     0     0     0     0     0      0.153      0.274     -0.387      0.498      0.000
+   182         22  gamma               91    96     0     0     0     0     0      0.027     -0.005     -0.161      0.163      0.000
+   183         22  gamma               91    96     0     0     0     0     0      0.735      0.333     -2.374      2.508      0.000
+   184        211  pi+                 91    97     0     0     0     0     0      0.053     -0.054     -0.081      0.178      0.140
+   185       -211  pi-                 91    97     0     0     0     0     0      0.143     -0.184     -0.003      0.272      0.140
+   186        111  (pi0)              -91    97     0   232   233     0     0      0.097      0.066      0.076      0.195      0.135
+   187        211  pi+                 91    98     0     0     0     0     0     -0.063     -0.049      0.340      0.376      0.140
+   188       -211  pi-                 91    98     0     0     0     0     0      0.158     -0.069      0.132      0.259      0.140
+   189        111  (pi0)              -91    98     0   234   235     0     0      0.043      0.000     -0.171      0.222      0.135
+   190         22  gamma               91   109     0     0     0     0     0     -0.176      0.107  -1016.600   1016.600      0.000
+   191         22  gamma               91   109     0     0     0     0     0     -0.082     -0.028   -246.987    246.987      0.000
+   192         22  gamma               91   110     0     0     0     0     0      0.173      0.388   -471.151    471.151      0.000
+   193         22  gamma               91   110     0     0     0     0     0      0.025     -0.005    -39.692     39.692      0.000
+   194         22  gamma               91   112     0     0     0     0     0      0.084     -0.214    -11.876     11.878      0.000
+   195         22  gamma               91   112     0     0     0     0     0     -0.018     -0.417    -18.903     18.907      0.000
+   196         22  gamma               91   119     0     0     0     0     0     -0.100      0.049      0.300      0.320      0.000
+   197         22  gamma               91   119     0     0     0     0     0     -0.189      0.063      1.310      1.326      0.000
+   198         22  gamma               91   121     0     0     0     0     0     -0.069     -0.021      0.397      0.404      0.000
+   199         22  gamma               91   121     0     0     0     0     0     -0.110     -0.284      2.140      2.161      0.000
+   200        111  (pi0)              -91   122     0   236   237     0     0      0.298      0.279     52.355     52.357      0.135
+   201         22  gamma               91   122     0     0     0     0     0     -0.109     -0.216      7.686      7.690      0.000
+   202         22  gamma               91   125     0     0     0     0     0     -0.339      0.388    602.097    602.097      0.000
+   203         22  gamma               91   125     0     0     0     0     0     -0.034      0.127    118.638    118.638      0.000
+   204         22  gamma               91   133     0     0     0     0     0     -0.092     -0.366      0.330      0.501      0.000
+   205         22  gamma               91   133     0     0     0     0     0      0.012      0.004      0.031      0.034      0.000
+   206         22  gamma               91   135     0     0     0     0     0      0.093     -0.583     -4.373      4.413      0.000
+   207         22  gamma               91   135     0     0     0     0     0     -0.046     -0.171     -1.375      1.386      0.000
+   208         22  gamma               91   139     0     0     0     0     0      0.135      0.001     -0.255      0.289      0.000
+   209         22  gamma               91   139     0     0     0     0     0      0.177     -0.104     -0.741      0.769      0.000
+   210         22  gamma               91   143     0     0     0     0     0     -0.144      0.279     -0.376      0.489      0.000
+   211         22  gamma               91   143     0     0     0     0     0      0.010     -0.010     -0.028      0.031      0.000
+   212         22  gamma               91   147     0     0     0     0     0     -0.045     -0.149     -2.640      2.644      0.000
+   213         22  gamma               91   147     0     0     0     0     0      0.091     -0.294     -4.272      4.283      0.000
+   214         22  gamma               91   149     0     0     0     0     0      0.050      0.011     -0.095      0.108      0.000
+   215         22  gamma               91   149     0     0     0     0     0      0.003      0.061      0.028      0.067      0.000
+   216         22  gamma               91   151     0     0     0     0     0     -0.239      0.267     -1.576      1.616      0.000
+   217         22  gamma               91   151     0     0     0     0     0     -0.104      0.070     -0.301      0.326      0.000
+   218         22  gamma               91   155     0     0     0     0     0      0.067     -0.215      1.092      1.115      0.000
+   219         22  gamma               91   155     0     0     0     0     0     -0.067     -0.184      1.021      1.040      0.000
+   220         22  gamma               91   159     0     0     0     0     0      0.021     -0.015     11.306     11.307      0.000
+   221         22  gamma               91   159     0     0     0     0     0     -0.126     -0.355    324.855    324.855      0.000
+   222         22  gamma               91   161     0     0     0     0     0      0.075      0.034    280.476    280.476      0.000
+   223         22  gamma               91   161     0     0     0     0     0      0.200     -0.096    444.785    444.785      0.000
+   224         22  gamma               91   166     0     0     0     0     0      0.005     -0.105      0.825      0.832      0.000
+   225         22  gamma               91   166     0     0     0     0     0      0.354     -0.651      4.830      4.886      0.000
+   226         22  gamma               91   171     0     0     0     0     0     -0.526     -0.258      0.790      0.983      0.000
+   227         22  gamma               91   171     0     0     0     0     0     -0.183     -0.062      0.154      0.247      0.000
+   228         22  gamma               91   174     0     0     0     0     0     -0.038      0.053    -66.855     66.855      0.000
+   229         22  gamma               91   174     0     0     0     0     0     -0.097      0.270   -117.976    117.977      0.000
+   230         22  gamma               91   179     0     0     0     0     0      0.056     -0.101     -0.418      0.433      0.000
+   231         22  gamma               91   179     0     0     0     0     0      0.014      0.017     -0.515      0.515      0.000
+   232         22  gamma               91   186     0     0     0     0     0      0.049     -0.004      0.096      0.108      0.000
+   233         22  gamma               91   186     0     0     0     0     0      0.048      0.070     -0.019      0.087      0.000
+   234         22  gamma               91   189     0     0     0     0     0      0.083     -0.018     -0.065      0.107      0.000
+   235         22  gamma               91   189     0     0     0     0     0     -0.041      0.018     -0.105      0.114      0.000
+   236         22  gamma               91   200     0     0     0     0     0      0.299      0.265     51.912     51.913      0.000
+   237         22  gamma               91   200     0     0     0     0     0     -0.002      0.014      0.443      0.444      0.000
+                                   Charge sum:  2.000           Momentum sum:     -0.000      0.000     -0.000  13000.000  13000.000
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:25.612 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -30 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4       -30
+ O: 6        42       21 +1.58e+00,-9.23e-01,+1.28e+01,+1.30e+01  61       -11
+             49        2 +1.59e-02,-1.30e-01,+1.01e+03,+1.01e+03  61        -7
+             54        2 -1.30e+00,+7.34e-01,+5.03e+02,+5.03e+02  61       -19
+             60       21 +1.77e+00,+5.87e-02,+5.26e+01,+5.26e+01  61       -27
+             64     2101 -1.68e+00,-1.42e-01,+4.85e+03,+4.85e+03  63       -49
+             65       -2 -3.88e-01,+4.01e-01,+7.54e+01,+7.54e+01  63       -57
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -31 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4       -31
+ O: 6        43        2 +9.80e-01,-1.97e+00,-1.18e+03,+1.18e+03  61       -12
+             50        2 +3.05e-01,-5.33e-01,+1.86e+00,+1.96e+00  61        -8
+             55       21 +1.37e-01,-1.26e+00,-6.39e+01,+6.39e+01  61       -20
+             61       21 -1.01e+00,+8.36e-02,-2.16e+02,+2.16e+02  61       -28
+             66     2101 -3.51e-01,+2.19e+00,-4.50e+03,+4.50e+03  63       -66
+             67       -2 -6.12e-02,+1.49e+00,-5.37e+02,+5.37e+02  63       -63
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:25.647 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -521 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4      -521
+ O:35       694       21 +9.41e-02,-1.95e+00,+2.99e+02,+2.99e+02  61      -330
+            725        3 +1.94e+00,+2.45e+00,+1.86e+01,+1.88e+01  61       -93
+            738       21 -2.23e+00,+4.83e-01,+9.62e+01,+9.63e+01  61      -498
+            756       21 -3.99e+00,+1.33e+00,+6.47e+02,+6.47e+02  61      -187
+            769        2 +1.72e+00,-1.97e-01,+1.17e+01,+1.19e+01  61      -127
+            786        3 -3.52e-01,+7.21e-01,+1.33e+01,+1.34e+01  61      -217
+            805       21 -2.09e+00,+3.88e-01,+1.83e+00,+2.81e+00  61      -457
+            815        2 -1.17e+00,-3.33e+00,+1.00e+03,+1.00e+03  61      -261
+            823        2 +1.57e+00,-9.08e-01,-7.17e+00,+7.40e+00  61      -175
+            832       -3 +1.10e+00,+4.78e-01,+6.56e+02,+6.56e+02  61       -71
+            846        1 +1.41e+00,+5.16e-01,+7.62e+02,+7.62e+02  61      -243
+            859       -2 -2.71e-01,+2.86e+00,+1.86e+01,+1.88e+01  61      -232
+            870       21 -3.75e-01,-1.93e+00,+3.43e+02,+3.43e+02  61      -227
+            878        3 +1.89e+00,-7.69e-01,-3.03e+00,+3.65e+00  61      -316
+            884       21 +5.96e-01,-2.62e-01,+2.11e+02,+2.11e+02  61      -258
+            889       21 +1.29e-02,-2.68e+00,+2.61e+01,+2.62e+01  61      -412
+            899       -3 -4.57e-01,+1.08e+00,+7.33e+01,+7.33e+01  61      -275
+            903       21 -1.72e+00,-6.40e-02,+4.49e+00,+4.81e+00  61      -301
+            910       21 -8.49e-01,-2.68e+00,-5.98e+00,+6.60e+00  61      -305
+            914       21 -1.95e-01,-4.63e-01,-3.89e+00,+3.93e+00  61      -352
+            918       -3 -1.90e-01,-2.37e-01,-2.39e+00,+2.41e+00  61      -377
+            923        3 +4.65e-01,+2.33e-02,-8.27e+00,+8.28e+00  61      -470
+            927        3 +1.21e+00,+1.12e+00,+7.85e+01,+7.86e+01  61      -485
+            932       21 +4.27e-01,+4.00e-01,+3.73e+01,+3.73e+01  61      -515
+            936       21 +1.13e+00,-2.18e-01,+7.89e+00,+7.97e+00  61      -518
+            940        2 -4.88e-01,+5.47e-01,+1.31e+01,+1.31e+01  63      -910
+            941       -3 +1.16e+00,+1.39e-01,+8.76e+02,+8.76e+02  63      -948
+            942       -3 -9.75e-02,+2.14e-01,+2.82e+02,+2.82e+02  63      -787
+            943       -2 -1.61e-01,+6.28e-01,+1.16e+00,+1.37e+00  63      -885
+            944        3 +2.97e-01,+4.82e-01,+6.53e+02,+6.53e+02  63      -919
+            945       -3 +1.54e-02,+6.37e-01,+2.87e-01,+8.59e-01  63      -789
+            946        3 -1.60e-01,+6.28e-01,+1.48e+02,+1.48e+02  63      -825
+            947        3 +3.91e-01,+1.57e-01,+4.57e-01,+7.98e-01  63      -788
+            948       -3 -5.57e-01,-8.16e-03,+1.48e+00,+1.66e+00  63      -841
+            949       -3 -7.43e-02,+4.13e-01,+2.03e+02,+2.03e+02  63      -855
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -522 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4      -522
+ O:29       695        2 -7.13e-01,-3.93e+00,-7.35e+02,+7.35e+02  61      -331
+            726        2 +1.66e-01,+1.02e+00,-6.74e+01,+6.74e+01  61       -94
+            739       21 -2.21e+00,-8.41e-01,-2.10e+02,+2.10e+02  61      -499
+            757        1 +6.69e-01,-1.51e+00,-2.44e+01,+2.45e+01  61      -188
+            770       21 +2.85e+00,+3.27e-01,-2.36e+02,+2.36e+02  61      -128
+            787       21 -4.22e-02,-1.52e+00,-7.47e+01,+7.47e+01  61      -218
+            806       21 +3.17e-01,-4.13e-01,-1.21e+01,+1.21e+01  61       -75
+            816       21 -8.81e-01,-4.18e-01,-2.40e+01,+2.40e+01  61      -395
+            824       -1 +6.25e-01,+5.50e-01,-5.81e+02,+5.81e+02  61      -176
+            833       21 +2.25e+00,+2.17e-01,-9.54e+01,+9.54e+01  61       -72
+            847       21 -2.69e+00,+9.32e-01,-1.39e+02,+1.40e+02  61      -244
+            860       21 +3.09e-03,+3.82e+00,-1.04e+01,+1.10e+01  61      -233
+            871       21 -1.17e-01,-3.27e-01,-1.03e+02,+1.03e+02  61      -228
+            879       21 +3.05e-01,+2.75e+00,-4.36e+02,+4.36e+02  61      -317
+            885       21 +1.53e-01,+2.61e-01,+2.20e+00,+2.22e+00  61      -259
+            890       -2 +1.10e+00,-9.71e-01,-2.68e+01,+2.69e+01  61      -413
+            900       21 -1.17e+00,-5.77e-01,+6.74e+00,+6.86e+00  61      -276
+            904       21 +1.10e+00,+2.91e-01,-8.90e+00,+8.97e+00  61      -302
+            911       21 +8.79e-01,+7.07e-01,-4.82e+01,+4.82e+01  61      -306
+            915       21 -1.12e-01,-4.19e-01,-5.97e+01,+5.97e+01  61      -353
+            919       21 -3.06e-01,+6.57e-01,-3.81e+02,+3.81e+02  61      -378
+            924       21 -1.46e-01,-3.66e-01,-5.16e+02,+5.16e+02  61      -471
+            928       21 -5.95e-01,-2.61e+00,-5.85e+02,+5.85e+02  61      -486
+            933       21 +1.56e-01,+2.29e-02,+5.91e-02,+1.68e-01  61      -516
+            937       21 +1.72e-01,-8.37e-02,+5.63e-02,+2.00e-01  61      -519
+            950        1 -3.02e-02,+3.28e-01,-8.77e+02,+8.77e+02  63      -791
+            951       -1 +1.47e-01,+5.73e-01,-8.89e+01,+8.89e+01  63      -827
+            952        1 -1.02e+00,+7.89e-01,-6.87e+02,+6.87e+02  63      -947
+            953        2 -8.51e-01,+7.28e-01,-4.40e+02,+4.40e+02  63      -826
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -26 ID:    0 (X,cT):0
+ I: 1        19       21 -3.00e+00,+4.03e+00,+3.76e+00,+6.28e+00  51       -26
+ O: 2        36        3 -3.24e-01,+4.83e+00,+3.09e+00,+5.77e+00  51       -66
+             37       -3 -6.91e-01,-4.54e+00,+1.23e+00,+4.78e+00  51       -67
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -102 ID:    0 (X,cT):0
+ I: 1       119       21 -1.83e+00,+2.21e+00,-2.02e-01,+2.88e+00  43      -102
+ O: 2       131       -1 -3.46e+00,+3.22e+00,-3.96e+00,+6.17e+00  51      -110
+            132        1 +1.63e+00,-1.01e+00,-3.84e+00,+4.31e+00  51      -111
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -133 ID:    0 (X,cT):0
+ I: 1       187       21 +2.22e-15,+9.99e-16,+7.93e+00,+7.93e+00  41      -133
+ O: 2       169       -1 +6.66e-16,+8.88e-16,+6.38e+00,+6.38e+00  42       -84
+            195        1 -9.08e-01,+1.32e+00,+3.14e-01,+1.67e+00  43      -169
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -268 ID:    0 (X,cT):0
+ I: 1       274       21 -4.12e-01,+1.46e-01,-4.14e-01,+6.02e-01  52      -268
+ O: 2       341       -2 +3.59e-01,+1.60e+00,-7.61e+00,+7.79e+00  51      -342
+            342        2 -2.66e-02,-6.90e-01,-5.86e+00,+5.91e+00  51      -346
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -790 ID:    0 (X,cT):0
+ I: 2      1024        3 +3.91e-01,+1.57e-01,+4.57e-01,+7.98e-01  71      -790
+           1025       -3 +1.54e-02,+6.37e-01,+2.87e-01,+8.59e-01  71      -790
+ O: 1      1026      221 +4.12e-01,+8.04e-01,+9.78e-01,+1.44e+00   2     -1079
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -790 ID:    0 (X,cT):0
+ I: 2      1024        3 +3.91e-01,+1.57e-01,+4.57e-01,+7.98e-01  71      -790
+           1025       -3 +1.54e-02,+6.37e-01,+2.87e-01,+8.59e-01  71      -790
+ O: 1      1026      221 +4.12e-01,+8.04e-01,+9.78e-01,+1.44e+00   2     -1079
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:27.454 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -353 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4      -353
+ O:28       485        2 -3.71e+00,+3.44e+00,+1.14e+03,+1.14e+03  61       -83
+            520       21 -4.54e-01,+2.41e+00,+1.76e+01,+1.78e+01  61      -149
+            546       21 +1.45e+00,+5.45e-02,+1.03e+03,+1.03e+03  61       -94
+            570        2 +1.95e+00,-3.41e+00,+4.91e+01,+4.93e+01  61      -208
+            576       21 +2.07e+00,-7.90e-01,+2.24e+02,+2.24e+02  61      -243
+            581        3 -2.02e-01,-8.37e-01,+2.08e+00,+2.25e+00  61       -63
+            592        2 +8.26e-02,+1.76e+00,+1.35e+02,+1.35e+02  61      -130
+            597        3 -1.13e+00,-3.27e+00,+1.96e+02,+1.96e+02  61      -175
+            611       -1 -1.29e-01,+4.50e-01,-3.14e+00,+3.18e+00  61      -120
+            617       21 -4.74e-01,-2.17e+00,+4.01e+02,+4.01e+02  61      -127
+            621       21 +1.41e+00,-2.12e+00,+1.15e+02,+1.15e+02  61      -143
+            633       21 -7.49e-01,-8.09e-01,-1.19e+00,+1.63e+00  61      -158
+            640       21 -4.32e-01,+1.25e+00,+1.36e+02,+1.36e+02  61      -222
+            644       21 +4.29e-01,-7.12e-01,+2.48e+02,+2.48e+02  61      -235
+            651       21 -3.00e-02,+7.24e-03,-1.38e-01,+1.42e-01  61      -240
+            655       -3 +1.77e+00,+3.95e-01,+6.00e+02,+6.00e+02  61      -312
+            660       -2 -4.10e-02,+1.27e-01,+2.54e-01,+2.87e-01  61      -344
+            664       21 -2.55e-01,+2.15e-01,+4.96e+00,+4.97e+00  61      -347
+            668        3 -1.54e+00,-2.65e-01,+3.70e+00,+4.02e+00  61      -350
+            672     2101 -4.40e-01,+4.57e-01,+1.38e+03,+1.38e+03  63      -612
+            673       -2 +5.85e-01,-6.61e-01,+3.80e+01,+3.80e+01  63      -561
+            674       -3 +5.51e-01,+3.60e-01,+9.20e+01,+9.20e+01  63      -591
+            675       -2 +8.20e-02,+6.92e-01,+2.91e+01,+2.91e+01  63      -555
+            676       -3 -4.10e-01,+4.74e-01,+1.41e+02,+1.41e+02  63      -567
+            677        1 -7.76e-01,+1.10e+00,+6.08e+01,+6.08e+01  63      -560
+            678        3 +8.28e-01,+5.19e-01,+1.57e+02,+1.57e+02  63      -554
+            679        2 +1.89e-01,+9.25e-01,+2.16e+02,+2.16e+02  63      -614
+            680       -3 -6.20e-01,+4.06e-01,+7.53e+01,+7.53e+01  63      -570
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -354 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4      -354
+ O:24       486       -1 -6.10e-01,+1.63e+00,-2.47e+01,+2.48e+01  61       -84
+            521       21 +2.07e-01,-2.02e+00,-4.68e+01,+4.68e+01  61      -150
+            547        2 +1.57e+00,+1.70e+00,-1.51e+03,+1.51e+03  61       -95
+            571        3 -6.40e-01,+2.27e+00,-9.41e+00,+9.70e+00  61      -209
+            577       21 +2.01e-01,+1.13e+00,-2.89e+01,+2.89e+01  61      -244
+            582       21 +1.73e+00,-2.36e+00,-2.65e+02,+2.65e+02  61       -64
+            593        4 -1.16e-01,-5.18e-01,+1.53e+00,+1.62e+00  61      -131
+            598       21 -1.28e+00,+1.22e-01,-6.11e+02,+6.11e+02  61      -176
+            612       21 -6.44e-02,+1.08e+00,-1.11e+03,+1.11e+03  61      -121
+            618       21 -1.48e+00,-6.75e-01,-5.54e+01,+5.54e+01  61      -128
+            622       21 +1.51e+00,-3.38e-01,-8.97e+01,+8.97e+01  61      -144
+            634       21 -1.60e+00,+9.09e-01,-4.13e+01,+4.13e+01  61      -159
+            641       21 +1.94e+00,-1.70e+00,+1.64e+00,+3.06e+00  61      -223
+            645       21 -4.45e-01,-1.82e+00,-5.07e+01,+5.07e+01  61      -236
+            652       -2 +5.28e-03,-5.15e-02,-3.26e+02,+3.26e+02  61      -241
+            656       21 -1.17e+00,+9.53e-01,-1.74e+01,+1.75e+01  61      -313
+            661        2 -1.73e-01,+1.64e+00,-8.59e+01,+8.59e+01  61      -345
+            665       -2 -4.63e-02,-7.79e-01,+2.09e+00,+2.23e+00  61      -348
+            669       21 +7.73e-02,+5.49e-01,-6.44e+00,+6.47e+00  61      -351
+            681     2101 -1.99e-01,-6.51e-01,-1.63e+03,+1.63e+03  63      -558
+            682        1 +2.24e-01,-8.29e-01,-2.76e+02,+2.76e+02  63      -557
+            683       -3 +7.54e-02,-6.35e-02,-3.02e+02,+3.02e+02  63      -615
+            684       -4 -7.01e-02,-5.57e-01,+1.32e+00,+2.08e+00  63      -576
+            685        2 +3.61e-01,+3.76e-01,-5.62e+00,+5.65e+00  63      -611
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -161 ID:    0 (X,cT):0
+ I: 1       125       21 +6.51e-01,+1.86e+00,+1.55e+00,+2.51e+00  44      -161
+ O: 2       206        3 +2.45e-01,-9.10e-01,-3.69e-01,+1.13e+00  51      -417
+            207       -3 +3.93e-01,+2.77e+00,+4.33e-01,+2.87e+00  51      -201
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:28.605 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -202 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4      -202
+ O:26       268       -1 +2.98e+00,+2.13e+00,+2.00e+00,+4.18e+00  61      -174
+            278       21 +6.14e-01,-1.77e+00,+2.47e+02,+2.47e+02  61       -72
+            286        3 -2.53e+00,-2.77e-01,+4.80e+00,+5.44e+00  61      -183
+            294       21 +5.46e-01,-3.15e+00,-3.48e+00,+4.72e+00  61       -10
+            298        2 +2.41e+00,+5.84e-01,+6.60e-01,+2.57e+00  61      -119
+            307       21 -1.91e-01,+1.15e+00,-1.18e+01,+1.18e+01  61       -16
+            311        1 -5.53e-01,+9.19e-01,+1.66e+02,+1.66e+02  61      -156
+            316        1 -1.76e+00,-7.31e-01,+1.08e+03,+1.08e+03  61       -68
+            322       21 +8.11e-03,+1.96e-01,+6.04e+02,+6.04e+02  61      -139
+            341       21 +1.54e-01,+3.59e-01,+2.65e+01,+2.65e+01  61       -76
+            348        1 +3.42e-01,-7.30e-01,+3.58e+01,+3.58e+01  61       -65
+            353        1 +1.42e+00,-1.34e+00,+8.35e+01,+8.35e+01  61      -133
+            360       21 -4.61e-01,+9.51e-01,-1.26e+01,+1.26e+01  61       -99
+            366       21 +4.55e-01,-2.74e-01,+6.92e+00,+6.94e+00  61      -112
+            370       21 -1.88e+00,+1.66e+00,+1.14e+02,+1.14e+02  61      -190
+            374       -1 +2.11e-01,+9.28e-01,+4.75e+01,+4.76e+01  61      -193
+            378       21 +8.65e-02,-3.94e-01,+2.23e+02,+2.23e+02  61      -196
+            382       21 +3.59e-01,-7.27e-01,+2.51e+02,+2.51e+02  61      -199
+            386     2203 -1.65e-01,+6.82e-02,+1.62e+02,+1.62e+02  63      -330
+            387        1 -1.86e-01,+4.40e-01,+3.98e+02,+3.98e+02  63      -315
+            388       -3 -3.82e-01,+3.04e-01,+4.36e+01,+4.36e+01  63      -311
+            389       -2 -1.14e-01,-8.90e-01,+1.55e+02,+1.55e+02  63      -321
+            390       -1 +2.67e-01,+9.41e-02,+3.40e+02,+3.40e+02  63      -332
+            391       -1 -1.04e-01,+7.76e-01,+2.48e+02,+2.48e+02  63      -316
+            392       -1 -7.95e-01,-1.68e-01,+1.17e+03,+1.17e+03  63      -358
+            393        1 -7.38e-01,-1.06e-01,+1.06e+03,+1.06e+03  63      -320
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -203 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4      -203
+ O:22       269        2 +1.83e+00,-2.27e+00,-1.05e+03,+1.05e+03  61      -175
+            279       21 -1.39e+00,-2.06e+00,-5.19e+00,+5.76e+00  61       -73
+            287       21 +1.43e+00,+1.66e+00,-5.10e+01,+5.10e+01  61      -184
+            295       21 -2.05e+00,+2.42e+00,-1.10e+01,+1.14e+01  61       -11
+            299       21 +1.36e+00,+2.37e+00,-2.65e+02,+2.65e+02  61      -120
+            308       21 -6.72e-01,-3.38e+00,-1.15e+02,+1.16e+02  61       -17
+            312       21 -1.77e+00,+1.42e-01,+4.25e+00,+4.61e+00  61      -157
+            317        2 -4.32e-01,-4.32e-01,+2.41e-02,+6.11e-01  61       -69
+            323       21 +7.60e-01,+1.23e+00,-5.13e+02,+5.13e+02  61      -140
+            342        3 +7.47e-02,+1.44e-01,-2.24e+00,+2.24e+00  61       -77
+            349       21 +4.86e-01,+1.29e+00,+1.80e+01,+1.81e+01  61       -66
+            354       21 -1.11e+00,-1.72e+00,-7.54e+00,+7.81e+00  61      -134
+            361       21 +2.93e-02,-1.42e-01,-6.11e+02,+6.11e+02  61      -100
+            367       21 -5.49e-02,+5.91e-01,+2.21e+00,+2.29e+00  61      -113
+            371       21 +4.23e-01,-2.69e-01,-8.20e+00,+8.21e+00  61      -191
+            375       21 -5.26e-01,+4.56e-01,-7.81e+00,+7.84e+00  61      -194
+            379       21 -1.71e-01,-3.22e-01,+9.22e-01,+9.91e-01  61      -197
+            383        3 +1.18e+00,+1.48e-01,+7.11e-01,+1.39e+00  61      -200
+            394     2101 -1.14e-01,-4.68e-01,-3.41e+03,+3.41e+03  63      -314
+            395       -2 +3.09e-01,+9.02e-02,-3.91e+02,+3.91e+02  63      -335
+            396       -3 +3.29e-01,+2.66e-01,-2.07e+01,+2.07e+01  63      -355
+            397       -3 +6.19e-02,+2.52e-01,-2.95e+00,+3.00e+00  63      -361
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -87 ID:    0 (X,cT):0
+ I: 1        71       21 +6.88e-01,-2.53e-02,-3.33e+00,+3.40e+00  51       -87
+ O: 2       117       -1 -2.98e-01,-2.59e-01,-4.16e+00,+4.20e+00  51      -129
+            118        1 +1.06e+00,+3.81e-01,-1.73e+01,+1.74e+01  51       -92
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -164 ID:    0 (X,cT):0
+ I: 1       147       21 +4.61e-01,-2.34e-01,+1.68e+01,+1.68e+01  51      -164
+ O: 2       219        3 +2.24e-01,-2.32e-01,+1.09e+01,+1.10e+01  51      -259
+            220       -3 +3.58e-01,+1.59e-01,+6.34e+00,+6.37e+00  51      -263
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -160 ID:    0 (X,cT):0
+ I: 1       201       21 -7.17e-01,+1.54e-01,-2.38e-01,+7.72e-01  44      -160
+ O: 2       213        3 -8.47e-01,+3.91e-01,+2.36e-01,+1.08e+00  51      -252
+            214       -3 +1.55e-01,-2.78e-01,+1.00e+00,+1.16e+00  51      -256
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:29.621 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -320 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4      -320
+ O:25       426        2 -3.07e+00,-3.47e-01,+2.99e+03,+2.99e+03  61      -130
+            437        2 -1.22e+00,+2.25e+00,-4.91e+00,+5.53e+00  61      -295
+            449        1 -1.12e+00,-4.72e-01,+4.00e+02,+4.00e+02  61       -87
+            469       21 -1.77e+00,-1.16e+00,+1.48e+02,+1.48e+02  61      -112
+            486       -2 +6.70e-01,-2.33e-01,+3.11e+00,+3.19e+00  61      -186
+            495       21 -4.41e-01,+7.22e-01,+6.51e+01,+6.51e+01  61       -54
+            505        2 -1.08e+00,+1.29e-01,+4.75e+00,+4.87e+00  61       -58
+            515       -1 -5.32e-01,+1.55e-01,+2.00e+01,+2.00e+01  61       -69
+            519       21 +1.53e+00,+3.43e+00,+4.79e+02,+4.79e+02  61      -138
+            527       21 +9.56e-02,-9.78e-01,+9.76e+01,+9.76e+01  61      -119
+            538       21 +6.72e-01,-1.28e+00,+1.38e+02,+1.38e+02  61      -312
+            543       21 -5.81e-01,-1.55e+00,+3.72e+01,+3.72e+01  61      -211
+            554       21 +2.75e+00,+1.82e-01,+2.23e+02,+2.23e+02  61      -149
+            563       21 +2.68e-02,-2.50e+00,-2.69e+00,+3.68e+00  61      -167
+            567        1 +6.22e-01,-1.03e-01,+1.42e+02,+1.42e+02  61      -289
+            571       21 +1.48e-01,+5.38e-02,-1.84e+00,+1.85e+00  61      -292
+            575        2 +1.99e-01,-3.64e-01,+1.37e+01,+1.37e+01  61      -316
+            580       21 +8.79e-03,+1.28e-02,-2.52e-02,+2.96e-02  61      -309
+            584        2 -6.27e-01,+1.14e-02,+2.06e+02,+2.06e+02  63      -539
+            585       -2 +6.48e-01,+5.34e-01,+1.17e+01,+1.17e+01  63      -542
+            586        2 +5.23e-01,+2.82e-01,+3.40e+02,+3.40e+02  63      -488
+            587       -2 +8.62e-01,+5.22e-01,+8.44e+00,+8.51e+00  63      -586
+            588        1 +3.61e-01,+5.97e-01,+7.47e+01,+7.47e+01  63      -526
+            589       -1 +1.00e+00,-2.34e-01,+4.34e+02,+4.34e+02  63      -489
+            590       -2 +3.23e-01,+3.37e-01,+6.59e+02,+6.59e+02  63      -590
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -321 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4      -321
+ O:21       427       21 +2.32e+00,-2.81e+00,-1.66e+00,+4.00e+00  61      -252
+            438        2 +5.70e-01,-4.00e-01,-5.29e+02,+5.29e+02  61      -296
+            450       21 +1.64e-01,+4.23e-01,-2.23e+02,+2.23e+02  61       -88
+            470       21 -8.70e-01,+2.08e+00,-2.68e+01,+2.69e+01  61      -113
+            487       -2 +1.02e+00,-2.29e+00,-1.94e+01,+1.95e+01  61      -187
+            496       21 +7.80e-01,-6.48e-01,-2.29e+01,+2.30e+01  61       -55
+            506        2 +1.21e+00,+1.98e+00,-2.05e+03,+2.05e+03  61       -59
+            516       21 -1.24e+00,-7.15e-01,-1.00e+00,+1.75e+00  61       -70
+            520       -3 +3.43e-01,+7.85e-01,-1.35e+02,+1.35e+02  61      -139
+            528       21 +8.97e-01,+1.69e+00,-9.77e+00,+9.96e+00  61      -120
+            539       21 +5.44e-01,+4.71e-01,-9.65e+00,+9.68e+00  61      -313
+            544       21 +1.34e-01,-5.07e-01,-1.04e+02,+1.04e+02  61      -212
+            555        3 -3.66e+00,+8.43e-01,-2.37e+01,+2.40e+01  61      -150
+            564       21 -6.90e-01,-7.51e-02,-2.43e+00,+2.52e+00  61      -168
+            568       -3 +9.60e-01,+8.58e-01,-9.72e+02,+9.72e+02  61      -290
+            572       21 -2.14e-02,+1.37e-01,-6.23e+01,+6.23e+01  61      -293
+            576       21 -7.67e-01,-4.94e-01,+6.92e-01,+1.15e+00  61      -317
+            581       21 -5.35e-02,-2.09e-01,-1.54e+02,+1.54e+02  61      -310
+            591        1 -7.68e-01,-3.23e-01,-8.19e+00,+8.24e+00  63      -449
+            592        2 -6.37e-01,-6.61e-01,-8.86e+02,+8.86e+02  63      -585
+            593        3 -2.35e-01,-1.31e-01,-1.24e+03,+1.24e+03  63      -547
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -36 ID:    0 (X,cT):0
+ I: 1        56       21 -6.46e-14,+1.08e-13,-4.97e+01,+4.97e+01  41       -36
+ O: 2        49       -4 -5.68e-14,+8.26e-14,-4.14e+01,+4.14e+01  41       -25
+             62        4 -1.21e+00,-7.52e-01,-8.27e+00,+8.52e+00  43       -79
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -201 ID:    0 (X,cT):0
+ I: 1       157       21 -2.54e-01,-1.16e+00,-4.56e+00,+4.72e+00  43      -201
+ O: 2       263        3 -2.36e-01,+1.46e-01,-1.51e+00,+1.61e+00  51      -408
+            264       -3 -6.87e-01,-9.93e-01,-5.77e+00,+5.92e+00  51      -412
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -63 ID:    0 (X,cT):0
+ I: 1       168       21 -2.66e-15,+4.44e-16,-2.82e+00,+2.82e+00  41       -63
+ O: 2        82       -1 +0.00e+00,+0.00e+00,-8.97e-01,+8.97e-01  42        -2
+            173        1 -9.90e-01,+5.68e-01,-1.68e+00,+2.06e+00  43      -326
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -253 ID:    0 (X,cT):0
+ I: 1       208       21 -1.52e-01,+2.26e+00,+1.18e+01,+1.20e+01  51      -253
+ O: 2       338       -3 -4.35e-01,+2.04e+00,+1.36e+01,+1.38e+01  51      -323
+            339        3 +2.62e-01,+2.23e-01,+3.82e+00,+3.87e+00  51      -330
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -184 ID:    0 (X,cT):0
+ I: 1       209       21 +1.18e+00,+4.71e-01,+4.21e+00,+4.39e+00  51      -184
+ O: 2       242        3 +1.87e+00,-4.99e-01,+1.21e+01,+1.22e+01  51      -327
+            243       -3 +5.67e-01,+5.71e-01,+4.93e+00,+5.02e+00  51      -328
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -283 ID:    0 (X,cT):0
+ I: 1       360       21 +7.95e-03,-3.62e-01,+2.63e+01,+2.63e+01  51      -283
+ O: 2       379       -3 -6.77e-01,-6.50e-01,+3.66e+01,+3.66e+01  51      -357
+            380        3 -5.07e-01,-6.34e-01,+3.04e+01,+3.04e+01  51      -358
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+Begin processing the 7th record. Run 1, Event 7, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:30.331 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -244 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4      -244
+ O:25       331       21 -3.32e+00,+2.06e+00,+1.37e+02,+1.37e+02  61      -146
+            341       21 -3.65e-01,-1.22e+00,+2.09e+02,+2.09e+02  61       -88
+            356        3 -1.21e+00,+2.44e+00,+4.81e-01,+2.77e+00  61      -179
+            363       21 +2.54e+00,-5.11e-01,+1.12e+01,+1.15e+01  61       -10
+            367       21 -9.71e-02,+3.33e-01,+8.30e+02,+8.30e+02  61      -111
+            376       21 -1.67e+00,+6.03e-01,+8.49e+02,+8.49e+02  61      -121
+            390        2 +2.40e+00,+5.07e-01,+1.05e+01,+1.08e+01  61       -58
+            396       21 -1.17e+00,-7.43e-01,+8.98e+01,+8.98e+01  61      -103
+            411        2 -3.60e+00,-2.17e-01,+1.49e+02,+1.49e+02  61      -160
+            426       21 -4.30e-01,+1.46e-01,+1.50e+02,+1.50e+02  61       -67
+            430       -2 +2.46e-01,-1.99e+00,+1.73e+00,+2.65e+00  61      -129
+            438       -2 +1.21e+00,-1.65e+00,+7.38e-01,+2.18e+00  61       -85
+            442       21 -3.20e-01,+1.61e+00,-7.68e-01,+1.81e+00  61      -211
+            447       21 +7.26e-01,-5.87e-01,+3.81e+01,+3.81e+01  61      -240
+            452       21 +1.86e+00,+1.03e+00,+1.36e+02,+1.36e+02  61      -233
+            457       21 -5.56e-02,-1.55e-01,-5.33e-01,+5.58e-01  61      -186
+            461       21 -5.46e-01,-1.03e+00,+2.99e+00,+3.21e+00  61      -203
+            465       -3 +3.06e-01,-7.03e-01,+9.15e-01,+1.19e+00  61      -230
+            469       21 +5.02e-01,+2.04e-01,+5.62e+00,+5.65e+00  61      -237
+            473     2103 +8.95e-01,+1.14e-01,+2.33e+03,+2.33e+03  63      -391
+            474       -3 +1.57e-01,-6.54e-02,+1.20e+03,+1.20e+03  63      -448
+            475       -2 +5.28e-01,+2.54e-02,+3.78e+01,+3.78e+01  63      -394
+            476        2 +4.51e-01,-9.22e-02,+5.71e+01,+5.71e+01  63      -407
+            477        2 +6.01e-01,+5.46e-02,+2.80e+00,+2.88e+00  63      -393
+            478        3 +3.40e-01,-1.68e-01,+2.41e+02,+2.41e+02  63      -399
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -245 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4      -245
+ O:24       332        2 -1.50e+00,+8.24e-02,-1.82e+03,+1.82e+03  61      -147
+            342       21 -8.01e-01,+1.60e+00,-2.98e+02,+2.98e+02  61       -89
+            357       21 +1.30e-01,-2.12e-01,-6.01e+01,+6.01e+01  61      -180
+            364        1 +3.33e+00,+4.15e-01,-2.86e-01,+3.37e+00  61       -11
+            368       -3 -7.52e-01,-9.11e-01,+3.84e-01,+1.24e+00  61       -36
+            377        1 +9.64e-01,+2.64e-01,-1.47e+02,+1.47e+02  61      -122
+            391       21 +9.32e-01,+1.43e+00,-5.90e+01,+5.91e+01  61       -59
+            397       -1 +9.75e-02,+2.47e-01,-3.05e+02,+3.05e+02  61      -104
+            412       21 -2.98e+00,-1.54e+00,-1.88e+02,+1.88e+02  61      -161
+            427       21 +2.04e-01,-2.50e-02,+5.96e-01,+6.30e-01  61       -68
+            431       21 +1.13e+00,+2.43e-01,-2.79e+01,+2.80e+01  61      -130
+            439       21 -1.37e+00,+1.00e+00,-4.55e+01,+4.55e+01  61       -86
+            443       21 +6.89e-01,-2.03e+00,-2.85e+01,+2.86e+01  61       -99
+            448       -1 -9.45e-01,+4.73e-01,+8.09e+00,+8.15e+00  61      -241
+            453        2 -2.29e+00,-4.63e-01,-8.83e+02,+8.83e+02  61      -234
+            458       21 +5.14e-01,+3.12e-01,-1.61e+02,+1.61e+02  61      -187
+            462       21 +1.04e+00,-1.40e+00,-4.72e+00,+5.04e+00  61      -204
+            466        2 +1.11e+00,-3.00e-02,-1.75e-01,+1.13e+00  61      -231
+            470       21 -1.46e+00,+8.93e-01,-1.31e+02,+1.31e+02  61      -238
+            479       -1 +3.86e-01,+4.19e-02,-3.83e+02,+3.83e+02  63      -382
+            480        3 -3.08e-01,-3.07e-01,-1.28e+01,+1.28e+01  63      -351
+            481        1 +9.53e-01,-7.75e-02,-8.64e+02,+8.64e+02  63      -381
+            482        1 -8.13e-02,+3.67e-01,-2.06e+02,+2.06e+02  63      -392
+            483       -2 +1.02e+00,-3.75e-01,-8.71e+02,+8.71e+02  63      -392
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -78 ID:    0 (X,cT):0
+ I: 1         6       21 -5.31e+00,-6.23e+00,-1.32e+02,+1.32e+02  23       -78
+ O: 2       104       -1 -5.42e+00,-6.30e+00,-1.53e+02,+1.53e+02  51      -149
+            105        1 +1.08e-01,+7.27e-02,-2.25e+00,+2.27e+00  51      -151
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -110 ID:    0 (X,cT):0
+ I: 1        52       21 +1.80e+00,+1.56e-01,+2.03e+01,+2.03e+01  44      -110
+ O: 2       145        2 -6.36e-02,+4.80e-01,+6.11e+00,+6.13e+00  51      -276
+            146       -2 +1.87e+00,-3.24e-01,+3.51e+01,+3.51e+01  51      -278
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -23 ID:    0 (X,cT):0
+ I: 1        67       21 +1.07e-14,-7.11e-15,+8.49e+02,+8.49e+02  41       -23
+ O: 2        33       -4 +0.00e+00,+0.00e+00,+6.87e+01,+6.87e+01  42       -16
+             72        4 -4.44e-01,-7.06e-01,+7.80e+02,+7.80e+02  43      -126
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -101 ID:    0 (X,cT):0
+ I: 1       101       21 -6.10e-01,+2.40e+00,-9.27e+00,+9.60e+00  51      -101
+ O: 2       134        3 -7.39e-01,-1.08e-01,-9.18e+00,+9.22e+00  51      -105
+            135       -3 +1.28e-01,+2.50e+00,-1.15e+01,+1.18e+01  51      -109
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -117 ID:    0 (X,cT):0
+ I: 1       126       21 +7.18e-01,+6.75e-01,+1.24e+02,+1.24e+02  43      -117
+ O: 2       155       -4 -3.28e-01,+4.86e-01,+3.78e+00,+4.11e+00  51      -260
+            156        4 +1.06e+00,+1.81e-01,+1.20e+02,+1.20e+02  51      -156
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:       -1 ID:    0 (X,cT):0
+ I: 1       195       21 +3.55e-15,-5.68e-14,+1.37e+02,+1.37e+02  41        -1
+ O: 2         3       -1 +0.00e+00,+0.00e+00,+1.32e+00,+1.32e+00  21        -3
+            201        1 +4.14e-01,+5.47e-01,+1.35e+02,+1.35e+02  43      -250
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+Begin processing the 8th record. Run 1, Event 8, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:31.198 CEST
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -357 ID:    0 (X,cT):0
+ I: 1         1     2212 +0.00e+00,+0.00e+00,+6.50e+03,+6.50e+03   4      -357
+ O:29       488        2 +1.08e-01,-1.85e+00,+1.28e+03,+1.28e+03  61      -114
+            502       -2 +1.61e+00,+1.25e+00,+8.85e+01,+8.85e+01  61      -207
+            513       21 +1.71e+00,+1.55e+00,+7.35e+00,+7.70e+00  61      -169
+            526       21 -2.17e+00,+2.31e+00,+3.84e+02,+3.84e+02  61      -182
+            541        1 +3.06e-01,+2.47e+00,+1.95e+01,+1.97e+01  61      -265
+            548       21 +1.30e-01,-1.91e-01,+4.31e+02,+4.31e+02  61      -306
+            558       21 -3.40e+00,-2.72e+00,+1.69e+01,+1.74e+01  61      -341
+            566       21 -5.59e-02,-4.24e-01,+7.62e+00,+7.63e+00  61      -234
+            575       21 +2.54e+00,+9.04e-01,+9.14e+02,+9.14e+02  61       -99
+            586       -1 -3.66e+00,+1.75e+00,+4.08e+02,+4.08e+02  61      -222
+            600        1 -8.98e-02,-2.50e+00,-5.52e+00,+6.06e+00  61      -190
+            609       21 +6.81e-01,-1.91e+00,+1.03e+02,+1.03e+02  61       -47
+            613       21 +8.53e-01,-9.28e-01,+1.33e+02,+1.33e+02  61      -144
+            622       21 +5.84e-01,+1.03e+00,+1.21e+02,+1.21e+02  61      -246
+            629       21 +2.99e+00,-1.11e+00,+2.73e+02,+2.73e+02  61      -137
+            642       21 +3.28e-01,+6.47e-01,+4.90e+01,+4.90e+01  61      -104
+            651       21 +5.19e-01,+6.85e-02,-2.00e+01,+2.00e+01  61      -130
+            655        3 -1.03e+00,+1.30e-01,+3.43e+00,+3.59e+00  61      -293
+            660        2 -1.98e+00,+4.89e-01,+1.04e+02,+1.04e+02  61      -161
+            667       21 +1.02e+00,+4.11e-02,-7.69e+00,+7.75e+00  61      -288
+            672       21 +7.85e-02,+5.62e-02,-1.44e-01,+1.73e-01  61      -278
+            677       21 +3.34e-01,-1.74e-01,+1.85e+00,+1.89e+00  61      -348
+            681       21 +4.94e-02,-2.00e-03,-7.31e-01,+7.33e-01  61      -351
+            685       21 +5.71e-01,-1.60e-02,-4.24e+00,+4.28e+00  61      -354
+            689     2101 -3.33e-01,+4.77e-01,+1.97e+03,+1.97e+03  63      -695
+            690        2 +1.61e-01,+1.75e-01,+1.11e+02,+1.11e+02  63      -601
+            691       -1 -1.33e-01,-8.15e-02,+4.68e-01,+5.93e-01  63      -601
+            692       -3 -1.58e+00,-1.18e+00,+6.49e+01,+6.50e+01  63      -679
+            693       -2 -1.34e-01,-2.57e-01,+2.92e+00,+2.95e+00  63      -664
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -358 ID:    0 (X,cT):0
+ I: 1         2     2212 +0.00e+00,+0.00e+00,-6.50e+03,+6.50e+03   4      -358
+ O:29       489       21 -6.89e-01,-2.37e+00,-5.03e+02,+5.03e+02  61      -115
+            503       21 -1.07e+00,+1.66e+00,-1.50e+02,+1.50e+02  61      -208
+            514       21 -6.07e-01,-3.07e-01,-3.29e+02,+3.29e+02  61      -224
+            527       21 -2.36e+00,-3.98e-01,-7.39e+00,+7.77e+00  61      -183
+            542        1 +2.57e+00,+3.33e+00,-2.10e+01,+2.14e+01  61       -35
+            549       21 +2.55e-01,+6.28e-01,+1.30e+00,+1.47e+00  61       -17
+            559        2 -4.84e-01,+4.48e-01,-9.14e+02,+9.14e+02  61      -342
+            567       21 +1.45e+00,-1.02e+00,-2.90e+02,+2.90e+02  61      -214
+            576       21 -5.45e-02,-6.93e-01,-2.69e+01,+2.69e+01  61      -238
+            587       21 +1.54e+00,-2.97e+00,-1.44e+01,+1.48e+01  61      -298
+            601       21 +1.63e+00,+1.13e+00,-7.13e+02,+7.13e+02  61      -191
+            610       -2 +1.54e+00,+1.33e+00,-1.19e+01,+1.21e+01  61       -48
+            614       21 -4.00e-01,+4.07e-01,-8.93e+01,+8.93e+01  61      -145
+            623       21 -6.77e-01,+1.40e+00,-2.98e+01,+2.98e+01  61      -247
+            630       -1 -3.01e-01,-1.65e+00,-9.82e+00,+9.96e+00  61      -138
+            643       -3 -1.60e+00,-2.99e+00,+4.77e+00,+5.85e+00  61      -105
+            652        1 +6.40e-01,+3.88e-01,-6.38e+02,+6.38e+02  61      -131
+            656       21 -2.05e+00,+1.46e+00,-1.63e+02,+1.63e+02  61      -294
+            661       -2 +4.00e-01,-4.84e-01,-4.90e+01,+4.90e+01  61      -162
+            668       21 -5.81e-01,+3.70e-01,-9.04e+02,+9.04e+02  61      -242
+            673       21 +8.45e-03,-2.64e-01,-9.35e+01,+9.35e+01  61      -279
+            678       21 +4.91e-01,+5.48e-03,+1.46e-01,+5.12e-01  61      -349
+            682       21 +1.75e-02,-8.11e-02,-1.56e+02,+1.56e+02  61      -352
+            686       -1 -6.15e-02,+1.54e-02,-1.04e+02,+1.04e+02  61      -355
+            694        2 +3.88e-02,+2.82e-01,-7.93e+02,+7.93e+02  63      -513
+            695        2 -4.64e-01,+4.28e-01,-1.76e+01,+1.76e+01  63      -694
+            696        3 +6.58e-02,-2.27e-01,-1.05e+02,+1.05e+02  63      -691
+            697        2 +7.03e-01,+5.23e-01,-2.06e+02,+2.06e+02  63      -672
+            698        1 +5.71e-02,-3.60e-01,-1.21e+02,+1.21e+02  63      -513
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -50 ID:    0 (X,cT):0
+ I: 1        63       21 +5.40e-01,-1.50e+00,-1.69e+00,+2.32e+00  43       -50
+ O: 2        68        3 -1.84e+00,+5.18e-01,+4.00e-01,+2.01e+00  51      -187
+             69       -3 +2.38e+00,-2.02e+00,+8.80e-01,+3.28e+00  51      -188
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -67 ID:    0 (X,cT):0
+ I: 1        96       21 -2.22e-16,+0.00e+00,+4.36e+01,+4.36e+01  41       -67
+ O: 2        91        4 +0.00e+00,+0.00e+00,+2.14e+01,+2.14e+01  42       -55
+            101       -4 -1.61e+00,+9.86e-01,+2.22e+01,+2.23e+01  43      -251
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -223 ID:    0 (X,cT):0
+ I: 1       128       21 +3.91e+00,-4.32e+00,-1.25e+01,+1.38e+01  44      -223
+ O: 2       295        3 +2.26e+00,-1.83e+00,-8.38e+00,+8.88e+00  51      -338
+            296       -3 +1.64e+00,-2.49e+00,-5.41e+00,+6.20e+00  51      -386
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -142 ID:    0 (X,cT):0
+ I: 1       133       21 -3.36e+00,-2.31e+00,+5.58e+01,+5.60e+01  44      -142
+ O: 2       186        4 -1.68e-01,+1.40e-01,+5.53e+01,+5.53e+01  51      -175
+            187       -4 -3.20e+00,-2.28e+00,+6.88e+01,+6.89e+01  51      -232
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -85 ID:    0 (X,cT):0
+ I: 1       137       21 -1.11e-16,-1.11e-16,+5.27e+01,+5.27e+01  41       -85
+ O: 2       113        3 +0.00e+00,+0.00e+00,+3.44e+01,+3.44e+01  31       -87
+            141       -3 +8.03e-01,+1.24e+00,+1.40e+01,+1.41e+01  43      -485
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:      -52 ID:    0 (X,cT):0
+ I: 1       142       21 -5.55e-17,+2.22e-16,+2.66e+00,+2.66e+00  41       -52
+ O: 2        71       -4 +0.00e+00,+0.00e+00,+6.24e-01,+6.24e-01  31       -54
+            146        4 -1.27e-01,-7.98e-01,+1.67e+00,+2.39e+00  43      -148
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -305 ID:    0 (X,cT):0
+ I: 1       179       21 +7.63e-01,-1.13e+00,+7.72e+01,+7.72e+01  52      -305
+ O: 2       414        2 +1.51e-01,-1.04e+00,+9.29e+01,+9.29e+01  51      -409
+            415       -2 +6.12e-01,-9.06e-02,+4.46e+01,+4.46e+01  51      -414
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -151 ID:    0 (X,cT):0
+ I: 1       182       21 +2.18e+00,+4.55e-01,+9.57e+00,+9.82e+00  44      -151
+ O: 2       198       -4 +4.75e-01,+4.96e-01,+2.32e+01,+2.32e+01  51      -472
+            199        4 +1.72e+00,-1.75e-01,+1.32e+01,+1.34e+01  51      -205
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -264 ID:    0 (X,cT):0
+ I: 1       195       21 -2.37e+00,-2.50e+00,+9.58e+00,+1.02e+01  51      -264
+ O: 2       354       -1 -8.01e-01,-1.50e-01,+2.13e+00,+2.30e+00  51      -405
+            355        1 -1.57e+00,-2.35e+00,+9.29e+00,+9.72e+00  51      -408
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -297 ID:    0 (X,cT):0
+ I: 1       209       21 +1.94e+00,+1.61e+00,+2.25e+00,+3.38e+00  44      -297
+ O: 2       402       -2 +8.24e-01,+1.37e+00,+1.46e+00,+2.19e+00  51      -441
+            403        2 +1.12e+00,+2.44e-01,+6.30e-01,+1.35e+00  51      -447
+WARNING from PHOTOS:
+Branching ignored due to 4-momentum non conservation
+WARNING from PHOTOS:
+Momentum not conserved in the vertex:
+
+GenVertex:     -256 ID:    0 (X,cT):0
+ I: 1       215       21 -1.20e+00,-1.58e+00,-3.10e+02,+3.10e+02  51      -256
+ O: 2       342        1 -3.28e-01,-1.13e+00,-1.01e+02,+1.01e+02  51      -383
+            343       -1 -8.45e-01,-4.67e-01,-2.09e+02,+2.09e+02  51      -302
+WARNING from PHOTOS:
+Limit reached (100). Warnings suppressed.
+Begin processing the 9th record. Run 1, Event 9, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:33.547 CEST
+Begin processing the 10th record. Run 1, Event 10, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:33.690 CEST
+Begin processing the 11th record. Run 1, Event 11, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:34.877 CEST
+Begin processing the 12th record. Run 1, Event 12, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:38.596 CEST
+Begin processing the 13th record. Run 1, Event 13, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:38.873 CEST
+Begin processing the 14th record. Run 1, Event 14, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:39.432 CEST
+Begin processing the 15th record. Run 1, Event 15, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:40.025 CEST
+Begin processing the 16th record. Run 1, Event 16, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:41.577 CEST
+Begin processing the 17th record. Run 1, Event 17, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:41.744 CEST
+Begin processing the 18th record. Run 1, Event 18, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:43.614 CEST
+Begin processing the 19th record. Run 1, Event 19, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:44.992 CEST
+Begin processing the 20th record. Run 1, Event 20, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:45.471 CEST
+Begin processing the 21st record. Run 1, Event 21, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:45.907 CEST
+Begin processing the 22nd record. Run 1, Event 22, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:47.220 CEST
+Begin processing the 23rd record. Run 1, Event 23, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:47.327 CEST
+Begin processing the 24th record. Run 1, Event 24, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:48.295 CEST
+Begin processing the 25th record. Run 1, Event 25, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:48.666 CEST
+Begin processing the 26th record. Run 1, Event 26, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:49.638 CEST
+Begin processing the 27th record. Run 1, Event 27, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:49.653 CEST
+Begin processing the 28th record. Run 1, Event 28, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:50.831 CEST
+Begin processing the 29th record. Run 1, Event 29, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:51.051 CEST
+Begin processing the 30th record. Run 1, Event 30, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:53.339 CEST
+Begin processing the 31st record. Run 1, Event 31, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:53.353 CEST
+Begin processing the 32nd record. Run 1, Event 32, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:55.133 CEST
+Begin processing the 33rd record. Run 1, Event 33, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:56.643 CEST
+Begin processing the 34th record. Run 1, Event 34, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:57.277 CEST
+Begin processing the 35th record. Run 1, Event 35, LumiSection 1 on stream 0 at 30-Jun-2021 09:24:59.138 CEST
+Begin processing the 36th record. Run 1, Event 36, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:00.117 CEST
+Begin processing the 37th record. Run 1, Event 37, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:00.981 CEST
+Begin processing the 38th record. Run 1, Event 38, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:02.816 CEST
+Begin processing the 39th record. Run 1, Event 39, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:03.657 CEST
+Begin processing the 40th record. Run 1, Event 40, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:05.351 CEST
+Begin processing the 41st record. Run 1, Event 41, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:05.434 CEST
+Begin processing the 42nd record. Run 1, Event 42, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:07.204 CEST
+Begin processing the 43rd record. Run 1, Event 43, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:07.856 CEST
+Begin processing the 44th record. Run 1, Event 44, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:07.913 CEST
+Begin processing the 45th record. Run 1, Event 45, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:08.134 CEST
+ PYTHIA Warning in SimpleSpaceShower::pT2nextQCD: small daughter PDF  
+Begin processing the 46th record. Run 1, Event 46, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:09.681 CEST
+Begin processing the 47th record. Run 1, Event 47, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:09.902 CEST
+Begin processing the 48th record. Run 1, Event 48, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:10.805 CEST
+Begin processing the 49th record. Run 1, Event 49, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:12.501 CEST
+Begin processing the 50th record. Run 1, Event 50, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:12.696 CEST
+Begin processing the 51st record. Run 1, Event 51, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:16.639 CEST
+Begin processing the 52nd record. Run 1, Event 52, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:17.689 CEST
+Begin processing the 53rd record. Run 1, Event 53, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:19.581 CEST
+Begin processing the 54th record. Run 1, Event 54, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:19.995 CEST
+Begin processing the 55th record. Run 1, Event 55, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:20.971 CEST
+Begin processing the 56th record. Run 1, Event 56, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:21.268 CEST
+Begin processing the 57th record. Run 1, Event 57, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:22.492 CEST
+Begin processing the 58th record. Run 1, Event 58, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:23.229 CEST
+Begin processing the 59th record. Run 1, Event 59, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:23.396 CEST
+Begin processing the 60th record. Run 1, Event 60, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:25.241 CEST
+Begin processing the 61st record. Run 1, Event 61, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:25.558 CEST
+Begin processing the 62nd record. Run 1, Event 62, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:26.140 CEST
+Begin processing the 63rd record. Run 1, Event 63, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:26.261 CEST
+Begin processing the 64th record. Run 1, Event 64, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:26.763 CEST
+ PYTHIA Error in BeamRemnants::setKinematics: kinematics construction failed  
+Begin processing the 65th record. Run 1, Event 65, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:29.040 CEST
+Begin processing the 66th record. Run 1, Event 66, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:29.227 CEST
+Begin processing the 67th record. Run 1, Event 67, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:30.086 CEST
+Begin processing the 68th record. Run 1, Event 68, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:32.323 CEST
+Begin processing the 69th record. Run 1, Event 69, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:32.585 CEST
+Begin processing the 70th record. Run 1, Event 70, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:32.755 CEST
+Begin processing the 71st record. Run 1, Event 71, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:32.942 CEST
+Begin processing the 72nd record. Run 1, Event 72, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:34.269 CEST
+Begin processing the 73rd record. Run 1, Event 73, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:37.845 CEST
+Begin processing the 74th record. Run 1, Event 74, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:38.025 CEST
+Begin processing the 75th record. Run 1, Event 75, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:39.240 CEST
+Begin processing the 76th record. Run 1, Event 76, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:40.298 CEST
+Begin processing the 77th record. Run 1, Event 77, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:40.707 CEST
+Begin processing the 78th record. Run 1, Event 78, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:42.455 CEST
+Begin processing the 79th record. Run 1, Event 79, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:43.049 CEST
+Begin processing the 80th record. Run 1, Event 80, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:43.694 CEST
+Begin processing the 81st record. Run 1, Event 81, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:43.736 CEST
+Begin processing the 82nd record. Run 1, Event 82, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:44.681 CEST
+Begin processing the 83rd record. Run 1, Event 83, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:46.630 CEST
+Begin processing the 84th record. Run 1, Event 84, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:46.697 CEST
+Begin processing the 85th record. Run 1, Event 85, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:48.013 CEST
+Begin processing the 86th record. Run 1, Event 86, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:48.299 CEST
+Begin processing the 87th record. Run 1, Event 87, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:49.400 CEST
+Begin processing the 88th record. Run 1, Event 88, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:50.964 CEST
+Begin processing the 89th record. Run 1, Event 89, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:51.528 CEST
+Begin processing the 90th record. Run 1, Event 90, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:54.322 CEST
+Begin processing the 91st record. Run 1, Event 91, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:54.431 CEST
+Begin processing the 92nd record. Run 1, Event 92, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:56.457 CEST
+Begin processing the 93rd record. Run 1, Event 93, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:57.352 CEST
+Begin processing the 94th record. Run 1, Event 94, LumiSection 1 on stream 0 at 30-Jun-2021 09:25:58.841 CEST
+Begin processing the 95th record. Run 1, Event 95, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:00.895 CEST
+Begin processing the 96th record. Run 1, Event 96, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:01.520 CEST
+Begin processing the 97th record. Run 1, Event 97, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:02.898 CEST
+Begin processing the 98th record. Run 1, Event 98, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:04.415 CEST
+Begin processing the 99th record. Run 1, Event 99, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:05.013 CEST
+Begin processing the 100th record. Run 1, Event 100, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:05.756 CEST
+Begin processing the 101st record. Run 1, Event 101, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:06.644 CEST
+Begin processing the 102nd record. Run 1, Event 102, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:08.744 CEST
+Begin processing the 103rd record. Run 1, Event 103, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:08.860 CEST
+Begin processing the 104th record. Run 1, Event 104, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:09.127 CEST
+Begin processing the 105th record. Run 1, Event 105, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:09.252 CEST
+Begin processing the 106th record. Run 1, Event 106, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:09.533 CEST
+Begin processing the 107th record. Run 1, Event 107, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:09.652 CEST
+Begin processing the 108th record. Run 1, Event 108, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:09.778 CEST
+Begin processing the 109th record. Run 1, Event 109, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:12.070 CEST
+Begin processing the 110th record. Run 1, Event 110, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:15.978 CEST
+Begin processing the 111th record. Run 1, Event 111, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:18.985 CEST
+Begin processing the 112th record. Run 1, Event 112, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:20.286 CEST
+Begin processing the 113th record. Run 1, Event 113, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:22.145 CEST
+Begin processing the 114th record. Run 1, Event 114, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:22.749 CEST
+Begin processing the 115th record. Run 1, Event 115, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:23.032 CEST
+Begin processing the 116th record. Run 1, Event 116, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:25.703 CEST
+Begin processing the 117th record. Run 1, Event 117, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:26.229 CEST
+Begin processing the 118th record. Run 1, Event 118, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:26.266 CEST
+Begin processing the 119th record. Run 1, Event 119, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:27.593 CEST
+Begin processing the 120th record. Run 1, Event 120, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:28.303 CEST
+Begin processing the 121st record. Run 1, Event 121, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:29.607 CEST
+Begin processing the 122nd record. Run 1, Event 122, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:29.632 CEST
+Begin processing the 123rd record. Run 1, Event 123, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:29.848 CEST
+Begin processing the 124th record. Run 1, Event 124, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:31.081 CEST
+Begin processing the 125th record. Run 1, Event 125, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:31.848 CEST
+Begin processing the 126th record. Run 1, Event 126, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:35.347 CEST
+Begin processing the 127th record. Run 1, Event 127, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:36.094 CEST
+Begin processing the 128th record. Run 1, Event 128, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:37.371 CEST
+Begin processing the 129th record. Run 1, Event 129, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:37.535 CEST
+Begin processing the 130th record. Run 1, Event 130, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:37.545 CEST
+Begin processing the 131st record. Run 1, Event 131, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:38.842 CEST
+Begin processing the 132nd record. Run 1, Event 132, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:40.171 CEST
+Begin processing the 133rd record. Run 1, Event 133, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:40.217 CEST
+Begin processing the 134th record. Run 1, Event 134, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:41.318 CEST
+Begin processing the 135th record. Run 1, Event 135, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:41.350 CEST
+Begin processing the 136th record. Run 1, Event 136, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:41.371 CEST
+Begin processing the 137th record. Run 1, Event 137, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:41.690 CEST
+Begin processing the 138th record. Run 1, Event 138, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:43.737 CEST
+Begin processing the 139th record. Run 1, Event 139, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:49.451 CEST
+Begin processing the 140th record. Run 1, Event 140, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:49.584 CEST
+Begin processing the 141st record. Run 1, Event 141, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:49.756 CEST
+Begin processing the 142nd record. Run 1, Event 142, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:51.162 CEST
+Begin processing the 143rd record. Run 1, Event 143, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:52.043 CEST
+Begin processing the 144th record. Run 1, Event 144, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:54.458 CEST
+Begin processing the 145th record. Run 1, Event 145, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:55.683 CEST
+Begin processing the 146th record. Run 1, Event 146, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:55.836 CEST
+Begin processing the 147th record. Run 1, Event 147, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:57.596 CEST
+Begin processing the 148th record. Run 1, Event 148, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:59.439 CEST
+Begin processing the 149th record. Run 1, Event 149, LumiSection 1 on stream 0 at 30-Jun-2021 09:26:59.456 CEST
+Begin processing the 150th record. Run 1, Event 150, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:01.871 CEST
+Begin processing the 151st record. Run 1, Event 151, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:02.193 CEST
+Begin processing the 152nd record. Run 1, Event 152, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:03.538 CEST
+Begin processing the 153rd record. Run 1, Event 153, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:04.547 CEST
+Begin processing the 154th record. Run 1, Event 154, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:04.579 CEST
+Begin processing the 155th record. Run 1, Event 155, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:07.052 CEST
+Begin processing the 156th record. Run 1, Event 156, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:07.100 CEST
+Begin processing the 157th record. Run 1, Event 157, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:07.262 CEST
+Begin processing the 158th record. Run 1, Event 158, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:10.126 CEST
+Begin processing the 159th record. Run 1, Event 159, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:12.462 CEST
+Begin processing the 160th record. Run 1, Event 160, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:14.031 CEST
+Begin processing the 161st record. Run 1, Event 161, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:14.722 CEST
+Begin processing the 162nd record. Run 1, Event 162, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:16.670 CEST
+Begin processing the 163rd record. Run 1, Event 163, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:19.904 CEST
+Begin processing the 164th record. Run 1, Event 164, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:22.158 CEST
+Begin processing the 165th record. Run 1, Event 165, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:22.329 CEST
+Begin processing the 166th record. Run 1, Event 166, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:22.713 CEST
+Begin processing the 167th record. Run 1, Event 167, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:24.749 CEST
+Begin processing the 168th record. Run 1, Event 168, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:24.911 CEST
+Begin processing the 169th record. Run 1, Event 169, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:25.155 CEST
+Begin processing the 170th record. Run 1, Event 170, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:26.613 CEST
+Begin processing the 171st record. Run 1, Event 171, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:27.898 CEST
+Begin processing the 172nd record. Run 1, Event 172, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:29.123 CEST
+Begin processing the 173rd record. Run 1, Event 173, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:31.751 CEST
+Begin processing the 174th record. Run 1, Event 174, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:31.863 CEST
+Begin processing the 175th record. Run 1, Event 175, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:33.171 CEST
+Begin processing the 176th record. Run 1, Event 176, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:33.195 CEST
+Begin processing the 177th record. Run 1, Event 177, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:34.944 CEST
+Begin processing the 178th record. Run 1, Event 178, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:35.046 CEST
+Begin processing the 179th record. Run 1, Event 179, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:35.243 CEST
+Begin processing the 180th record. Run 1, Event 180, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:36.222 CEST
+Begin processing the 181st record. Run 1, Event 181, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:40.141 CEST
+Begin processing the 182nd record. Run 1, Event 182, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:43.252 CEST
+Begin processing the 183rd record. Run 1, Event 183, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:43.283 CEST
+Begin processing the 184th record. Run 1, Event 184, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:44.652 CEST
+Begin processing the 185th record. Run 1, Event 185, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:44.936 CEST
+Begin processing the 186th record. Run 1, Event 186, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:45.766 CEST
+Begin processing the 187th record. Run 1, Event 187, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:49.240 CEST
+Begin processing the 188th record. Run 1, Event 188, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:50.721 CEST
+Begin processing the 189th record. Run 1, Event 189, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:53.427 CEST
+Begin processing the 190th record. Run 1, Event 190, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:56.020 CEST
+Begin processing the 191st record. Run 1, Event 191, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:56.686 CEST
+Begin processing the 192nd record. Run 1, Event 192, LumiSection 1 on stream 0 at 30-Jun-2021 09:27:59.752 CEST
+Begin processing the 193rd record. Run 1, Event 193, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:00.340 CEST
+Begin processing the 194th record. Run 1, Event 194, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:02.492 CEST
+Begin processing the 195th record. Run 1, Event 195, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:02.582 CEST
+Begin processing the 196th record. Run 1, Event 196, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:03.655 CEST
+Begin processing the 197th record. Run 1, Event 197, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:05.266 CEST
+Begin processing the 198th record. Run 1, Event 198, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:07.072 CEST
+Begin processing the 199th record. Run 1, Event 199, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:08.324 CEST
+Begin processing the 200th record. Run 1, Event 200, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:09.617 CEST
+Begin processing the 201st record. Run 1, Event 201, LumiSection 1 on stream 0 at 30-Jun-2021 09:28:11.802 CEST
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | Les Houches User Process(es)                  9999 |         201        201        201 |   1.222e-05  0.000e+00 |
+ |    ... whereof user classification code       9987 |         201        201        201 |                        | 
+ |                                                    |                                   |                        |
+ | sum                                                |         201        201        201 |   1.222e-05  0.000e+00 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      3   Error in BeamRemnants::setKinematics: kinematics construction failed                                   | 
+ |   6849   Warning in SimpleSpaceShower::pT2nextQCD: small daughter PDF                                           | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+
+********************************************************************************
+
+                            =========================================
+                            PHOTOS, information routine
+                            Input parameters after reinitialization: 
+
+                            =========================================
+
+********************************************************************************
+
+                    INTERF= 1 ISEC= 0 ITRE= 0 IEXP= 1 IFTOP= 1 IFW= 1
+                    ALPHA_QED= 0x1.de3d3945c2bf2p-8 XPHCUT= 0x1.cd5f99c38b04bp-14
+
+                    Option with interference is active
+                    Option with exponentiation is active EPSEXP=0x1.a36e2eb1c432dp-14
+                    Emision in t tbar production is active
+                    Correction wt in decay of W is active
+                    ME in decay of Z is active
+                    ME in decay of W is active
+                    emission of pairs is active
+                    emission of photons is inactive
+
+          WARNING:  /HEPEVT/ is not anymore used.
+
+     11574.369         6.128         1.000          9987
+ 
+30-Jun-2021 09:28:14 CEST  Closed file file:step1.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		1.157e+04 +/- 6.128e+00		201	189	12	201	189	12	1.157e+04 +/- 6.128e+00		100.0 +/- 0.0	100.0 +/- 0.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		1.157e+04 +/- 6.128e+00		201	189	12	201	189	12	1.157e+04 +/- 6.128e+00		100.0 +/- 0.0	100.0 +/- 0.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 1.157e+04 +- 6.128e+00 pb
+After matching: total cross section = 1.157e+04 +- 6.128e+00 pb
+Matching efficiency = 1.0 +/- 0.0   [TO BE USED IN MCM]
+Filter efficiency (taking into account weights)= (2.45563e+06) / (2.45563e+06) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (201) / (201) = 1.000e+00 +- 0.000e+00    [TO BE USED IN MCM]
+
+After filter: final cross section = 1.157e+04 +- 6.128e+00 pb
+After filter: final fraction of events with negative weights = 5.970e-02 +- 9.976e-04
+After filter: final equivalent lumi for 1M events (1/fb) = 6.700e-02 +- 2.756e-04
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      15       15
+    2 LogicError           -w Pythia8Hadronize                       1        1
+    3 fileAction           -s file_close                             1        1
+    4 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostGlobalEndRun PostGlobalEndRun PostGlobalEndRun
+    2 LogicError           Run: 1                            
+    3 fileAction           PostGlobalEndRun                  
+    4 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                16                  16
+System                  3                   3
+
+dropped waiting message count 0
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
